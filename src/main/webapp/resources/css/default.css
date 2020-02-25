@@ -1,0 +1,339 @@
+@charset "UTF-8";
+
+body{
+	margin: 0;
+}
+h1{
+	margin: 0;
+}
+body div#conBg {
+	display:block;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	position:fixed;
+	background-color:rgb(120,120,120);
+	background-image:url('../images/bg_m.jpg');
+	background-repeat:repeat-x;
+	background-attachment: fixed;
+	background-size: auto 220vh;
+	/* outline:2px solid red; */
+}
+body div.parentBg{
+	width: 160vw;
+    height: 160vw;
+    perspective-origin: center;
+    perspective: 1090vw;
+    top: 90vh;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+}
+body div.parentBg img{
+	perspective-origin: center;
+    width: 100%;
+    transform: translateY(-80vw) rotateX(-88deg) rotateZ(106deg);
+    height: 100%;
+}
+a:link,
+a:visited,
+a:hover{
+	text-decoration: none;
+	-webkit-appearance: none;
+}
+div.con_main_wrap div.logo_wrap{
+	position: absolute;
+	top: 40px;
+    left: 40px;
+}
+div.con_main_wrap div.logo_wrap h1{
+	width: 109px;
+    height: 120px;
+    display: block;
+    background: url(../images/logo.svg) no-repeat;
+}
+div.con_main_wrap div.logo_wrap h1 a{
+	/* background: url(../images/main_title.png);
+    background-repeat: no-repeat;
+    top: 70px;
+    left: -5px;
+    z-index: 9;
+    width: 34px;
+    height: 302px;
+    position: absolute; */
+    font-size: 0;
+}
+div.con_main_wrap div.btn_wrap{
+	position: absolute;
+    left: 50%;
+    top: 90vh;
+    width: 100%;
+    height: 80px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+div.con_main_wrap div.btn_wrap a{}
+div.con_main_wrap div.btn_wrap a.btn_video{
+	position: absolute;
+    background: url(../images/btn_video.png) no-repeat;
+    width: 80px;
+    height: 80px;
+    font-size: 0;
+    left: 40px;
+    cursor: pointer;
+}
+/* div.con_main_wrap div.btn_wrap a.btn_buy{
+	position: absolute;
+    background: url(../images/btn_show.png) no-repeat;
+    width: 230px;
+    height: 80px;
+    font-size: 0;
+    right: 40px;
+} */
+div.con_main_wrap div.btn_wrap a.btn_buy{
+	position: absolute;
+	width: 230px;
+	height: 58px;
+	font-size: 32px;
+	right: 20px;
+	background: #000;
+	border-radius: 174px;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	padding-top: 22px;
+	font-family: 'sandoll 고딕th', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	font-weight: 500;
+	z-index: 999;
+}
+._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 p.con_sub1{
+	font-size: 8vw;
+	line-height: 6.5vw;
+}
+._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 h2.con_main{
+	font-size: 30vw;
+	line-height: 25vw;
+}
+._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 p.con_sub2{
+	opacity: 0;
+}
+
+div.artcl_item p.con_sub1{
+	font-family: 'sandoll 고딕th', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	font-size: 2.5vw;
+	/* font-size: 50px; */
+	text-transform: uppercase;
+	/* width: 306px;
+	height: 198px; */
+	line-height: 3.5vw;
+	margin: 0 auto;
+}
+div.artcl_item h2.con_main{
+	font-family: 'League Gothic', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	font-size: 0;
+	background: url("../images/airlock.svg") no-repeat;
+	/* font-weight: 400;
+	line-height: 17vw;
+	letter-spacing: -6px;
+	color: #CF0A2C; */
+	margin: 0;
+	text-transform: uppercase;
+	width: 772px;
+	height: 115px;
+}
+div.artcl_item p.con_sub2{
+	font-family: 'League Gothic', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	font-size: 2.6vw;
+	margin: 0 auto;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+}
+div.artcl_item p.con_btm{
+	font-family: 'sandoll 고딕th', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	font-size: 24px;
+	/* font-weight: 700; */
+	text-align: justify;
+}
+div#artclItem0::after{
+	content: "";
+	display: block;
+	position: absolute;	
+	
+	background: url("../images/main_shadow.png");
+}
+/* div.con_main_wrap::before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 78%;
+	z-index: 0;
+	top: 0;
+	opacity: 0.5;
+	background-image: url("../images/main_top.png");
+	pointer-events: none;
+} */
+._device_mobile .view_template_contents div.con_main div.con_main_wrap::after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 32%;
+	z-index: 1;
+	bottom: 0;
+	background-image: url("../images/fog.png");
+	pointer-events: none;
+}
+
+div.navi_wrap{}
+div.navi_wrap ul{
+	right: 40px;
+    position: absolute;
+    top: 38vh;
+    list-style: none;
+}
+div.navi_wrap ul li.navi_no{
+	width: 20px;
+    height: 20px;
+    transition: all 1s;
+    position:relative;
+}
+div.navi_wrap ul li.navi_no._curr{
+	height:48px; 
+}
+div.navi_wrap ul li.navi_no a,
+div.navi_wrap ul li.navi_no a:active,
+div.navi_wrap ul li.navi_no a:focus,
+div.navi_wrap ul li.navi_no a:hover {
+	font-size: 0;
+	cursor: pointer;
+	display:inline-block;
+	width:100%;
+	height:100%;
+	padding:5px;
+	box-sizing:border-box;
+}
+
+div.navi_wrap ul li.navi_no a::after {
+	content:"";
+	display:inline-block;
+	width:10px;
+	height:calc(100% - 0px);
+    background-color: black;
+    border-radius: 20px;
+}
+
+div.main_nm_wrap{
+	position: absolute;
+	top: 40px;
+    right: 40px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+div.main_nm_wrap p.con_sub1{
+	font-family: 'League Gothic', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	font-size: 2.3vw;
+	text-transform: uppercase;
+	line-height: 3.5vw;
+	margin: 0 auto;
+	text-align: center;
+}
+div.main_nm_wrap p.con_main{
+	font-size: 0;
+	margin: 0;
+	/* font-family: 'League Gothic', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	line-height: 4vw;
+	color: #CF0A2C;
+	text-transform: uppercase; */
+	background: url("../images/airlock_top.svg") no-repeat;
+	width: 230px;
+	height: 34px;
+}
+body._page_no_1 div.main_nm_wrap,
+body._page_no_2 div.main_nm_wrap,
+body._page_no_3 div.main_nm_wrap,
+body._page_no_4 div.main_nm_wrap,
+body._page_no_5 div.main_nm_wrap,
+body._page_no_6 div.main_nm_wrap,
+body._page_no_7 div.main_nm_wrap{
+	opacity: 1;
+}
+
+div.video_wrap{
+	position: absolute;
+    background: #1c1c1c;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 999;
+    transition: top .5s ease-in-out;
+}
+div.video_wrap video{
+	width: 100%;
+	height: 100%;
+}
+/* div.video_wrap::after{
+	content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    top: 1vw;
+    border-radius: 50px;
+    position: absolute;
+    right: 1vw;
+    z-index: 999;
+    background: url("../images/video_off_w.svg") no-repeat;
+    cursor: pointer;
+} */
+div.video_wrap a.video_off{
+    display: block;
+    width: 50px;
+    height: 50px;
+    top: 1vw;
+    border-radius: 50px;
+    position: absolute;
+    right: 1vw;
+    z-index: 999;
+    background: url("../images/video_off_w.svg") no-repeat;
+    cursor: pointer;
+    font-size: 0;
+}
+div.video_wrap._video_hide_{
+	text-align: center;
+	top: -100vh;
+    transition: top .8s ease;
+}
+._device_mobile .vr_pos_0 div.item_shadow{
+	background: none;
+}
+/* .vr_pos_0 div.item_shadow{
+	display: block;
+    top: 82%;
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    background: url(../images/main_shadow.png) no-repeat;
+    width: 50%;
+    height: 12%;
+    opacity: 1;
+} */
+#artclItem4 h4{
+	font-size: 0;
+	background: url("../images/airlock_opa.svg");
+	width: 1129px;
+	height: 167px;
+	top: 37vh;
+	left: 21%;
+}
+.vr_pos_4 #conText{
+    z-index: -1;
+	position: absolute;
+	opacity: 1;
+	visibility: visible;
+    left: calc(80% - 1129px);
+    top: 40%;
+    background: url(../images/airlock_opa.svg) no-repeat;
+    width: 60vw;
+    height: 18vh;
+}

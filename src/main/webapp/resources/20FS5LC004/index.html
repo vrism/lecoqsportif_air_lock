@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Vrism VR contents</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+	<link rel="icon" href="https://contents.vrism.net/assets/images/favicon.ico" type="image/x-icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script type="text/javascript" src="https://contents.vrism.net/assets/src/blender/b4w.min.js"></script><script type="text/javascript" src="https://contents.vrism.net/assets/src/vrism/vrism.viewer.latest.js"></script>
+	<style type="text/css">html,body{width:100%;height:100%;margin:0;padding:0;background-color:transparent;}div.wrapper{width:100%;height:100%;margin:0;padding:0;}div.wrapper header#header{display:none;}div.wrapper div#vrism3DContent{width:100%;height:100%;}div.wrapper footer#footer{display:none;}</style>
+	<script type="text/javascript">
+		(function(ssq){var struc={},config={};ssq(document).ready(function(){if(window.location.hostname=="contents.vrism.net"){var cid=window.location.href.toLowerCase().split("contents.vrism.net/data/content/")[1].split("/")[2].toUpperCase();location.href="/data/content/?cid="+cid;}else{struc.init();}});struc={init:function(){build.loadConfig();}};var build={data:null,con:null,dom:null,loadConfig:function(){ssq.ajax({url:'assets/config.json',dataType:"json",success:function(data){build.view.start(data);},error:function(e){}});},view:{setConfig:function(data){build.data=data;function chgDir(key,chgPath){if(chgPath){if(chgPath.split("/").length==1)chgPath="./"+chgPath+"/";}else chgPath="./";key=chgPath+key.split("/assets/")[1];}chgDir(build.data.jsonPath,"assets");chgDir(build.data.binSrc.filePath);for(var i=0;i<build.data.imageSrc.length;i++){chgDir(build.data.imageSrc[i].filePath);}var param={},urlParam=build.view.urlParam;if(urlParam("angleX")&& urlParam("angleY"))param.angle=[Number(urlParam("angleX")),Number(urlParam("angleY"))];if(urlParam("angleLimitUp"))param.angleLimitUp=Number(urlParam("angleLimitUp"));if(urlParam("angleLimitDown"))param.angleLimitDown=Number(urlParam("angleLimitDown"));if(param.angleLimitDown||param.angleLimitDown==0){if(!urlParam("angleLimitUp"))param.angleLimitUp=-1.5;};if(urlParam("zoom"))param.zoom=Number(urlParam("zoom"));if(urlParam("maxZoom"))param.maxZoom=Number(urlParam("maxZoom"));if(urlParam("minZoom"))param.minZoom=Number(urlParam("minZoom"));if(urlParam("autoRun"))param.autoRun=urlParam("autoRun");build.data.previewImage.filePath=chgDir(build.data.previewImage.filePath,"assets");if(urlParam("previewImage")){var pviStr=urlParam("previewImage"),pviArr=pviStr.split("/");param.previewImage.fileName=pviArr[pviArr.length-1];param.previewImage.filePath=pviStr;}if(urlParam("themeColor")){param.themeColor=urlParam("themeColor").split("/");if(param.themeColor.length<3){param.themeColor[0]=param.themeColor[0]||build.data.themeColor[0];param.themeColor[1]=param.themeColor[1]||build.data.themeColor[1];param.themeColor[2]=param.themeColor[2]||build.data.themeColor[2];}if(urlParam("mainTheme"))param.themeColor[0]=urlParam("mainTheme");if(urlParam("subTheme"))param.themeColor[1]=urlParam("subTheme");if(urlParam("bgTheme"))param.themeColor[2]=urlParam("bgTheme");}else if(urlParam("mainTheme")||urlParam("subTheme")||urlParam("bgTheme")){param.themeColor=[];param.themeColor[0]=param.themeColor[0]||build.data.themeColor[0];param.themeColor[1]=param.themeColor[1]||build.data.themeColor[1];param.themeColor[2]=param.themeColor[2]||build.data.themeColor[2];if(urlParam("mainTheme"))param.themeColor[0]=urlParam("mainTheme");if(urlParam("subTheme"))param.themeColor[1]=urlParam("subTheme");if(urlParam("bgTheme"))param.themeColor[2]=urlParam("bgTheme");}if(urlParam("preloaderType"))param.preloaderType=urlParam("preloaderType");if(urlParam("previewBackgroundColor"))param.previewBackgroundColor=urlParam("previewBackgroundColor");if(urlParam("backgroundSize"))param.backgroundSize=urlParam("backgroundSize");if(urlParam("preloaderSize"))param.preloaderSize=urlParam("preloaderSize");param.preloaderImage="vrism";if(urlParam("preloaderImage"))param.preloaderImage=urlParam("preloaderImage");if(urlParam("smoothControl"))param.smoothControl=Number(urlParam("smoothControl"));if(urlParam("castingSpeed"))param.castingSpeed=Number(urlParam("castingSpeed"));if(urlParam("autoRotation"))param.autoRotation=Number(urlParam("autoRotation"));if(urlParam("quality"))param.quality=urlParam("quality");if(urlParam("animateDuration"))param.animateDuration=urlParam("animateDuration");if(urlParam("animateType"))param.animateType=urlParam("animateType");if(urlParam("pivot")){param.pivot=urlParam("pivot").split("[").join("").split("]").join("").split(",");for(var i=0;i<param.pivot.length;i++){param.pivot[i]=Number(param.pivot[i]);}}if(urlParam("pivotX"))param.pivotX=Number(urlParam("pivotX"));if(urlParam("pivotY"))param.pivotY=Number(urlParam("pivotY"));if(urlParam("pivotZ"))param.pivotZ=Number(urlParam("pivotZ"));if(urlParam("pivotControl"))param.pivotControl=(urlParam("pivotControl")=="on")?true:false;if(urlParam("controlEnable"))param.controlEnable=(urlParam("controlEnable")=="off")?false:true;if(urlParam("userControl"))param.userControl=urlParam("userControl");build.data=ssq.extend({},build.data,param);if(urlParam("background")){build.data.background=urlParam("background");}else if(Array.isArray(build.data.themeColor)){if(build.data.themeColor.length>2)build.data.background=build.data.themeColor[2];else build.data.background="";}else{build.data.background="";}if(urlParam("controlFullscreen"))build.data.controls.fullscreen=(urlParam("controlFullscreen")=="on")?true:false;if(urlParam("controlsInformation"))build.data.controls.information=(urlParam("controlsInformation")=="on")?true:false;if(urlParam("controlsPositionNav"))build.data.controls.positionNav=(urlParam("controlsPositionNav")=="on")?true:false;if(urlParam("controlsPositionPaging"))build.data.controls.positionPaging=(urlParam("controlsPositionPaging")=="on")?true:false;if(urlParam("controlsRotation"))build.data.controls.rotation=(urlParam("controlsRotation")=="on")?true:false;if(urlParam("controlsZoom"))build.data.controls.zoom=(urlParam("controlsZoom")=="on")?true:false;},start:function(data){build.view.setConfig(data);build.dom=ssq("div#vrism3DContent");
+		/*  =================================== vrism content viewer setting (start) =================================== */
+		build.con=build.dom.vrismViewer({
+			autoRun:build.data.autoRun,									// [strong]    "auto"(기본값), "on", "off"
+			background:build.data.background,							// [string]    "#FFFFFF", "rgb(255,255,255)", "rgba(255,255,255,0.5)", "transparent" ...
+			backgroundSize:build.data.backgroundSize,					// [string]    "", "contain", "cover" , "100% 100%"...
+			blender:{
+				angle:build.data.angle,									// [array]     [1.00000, 0.00000] ( [카메라 가로 각도, 세로 각도] )
+				angleLimitDown:build.data.angleLimitDown,				// [number]    null(기본값) PI(3.14159...)/2 ~PI/-2 사이의 값 (0일 경우 수평선 값이며, 설정값 아래 각도는 차단)
+				angleLimitUp:build.data.angleLimitUp,					// [number]    null(기본값) PI(3.14159...)/2 ~PI/-2 사이의 값 (angleLimitDown설정시 자동으로 -1.5가 기본값으로 설정됨, 설정값 위 각도는 차단)
+				autoRotation:build.data.autoRotation,					// [number]    0:정지(기본값) -2(좌측 회전) ~ 2(우측 회전)
+				controlEnable:build.data.controlEnable,					// [boolean]   true(기본값), false (사용자의 인터렉티브 허용 여부)
+				controls:{
+					fullscreen:build.data.controls.fullscreen,			// [boolean]   false(기본값), true (전체화면 버튼 보기 여부)
+					information:build.data.controls.information,		// [boolean]   false(기본값), true (브리즘뷰어 정보보기 버튼 여부)
+					positionNav:build.data.controls.positionNav,		// [boolean]   false(기본값), true (서브포지션 네비게이션(<,>) 버튼 보기 여부)
+					positionPaging:build.data.controls.positionPaging,	// [boolean]   false(기본값), true (서브포지션 페이징(. . .) 버튼 보기 여부)
+					rotation:build.data.controls.rotation,				// [boolean]   false(기본값), true (상하좌우 회번 버튼 보기 여부)
+					zoom:build.data.controls.zoom						// [boolean]   false(기본값), true (zoom in/out 버튼 보기 여부)
+				},
+				jsonPath:build.data.jsonPath,							// [string]    blender 생성 JSON 파일 URL
+				maxZoom:build.data.maxZoom,								// [number]    3(기본값) (최대 줌 값 설정)
+				minZoom:build.data.minZoom,								// [number]    10(기본값) (최소 줌 값 설정)
+				pivot:build.data.pivot,				                	// [array]     [0,0,0](기본값), 카메라 앵글의 피벗 포지션 x,y,z 값
+				pivotControl:build.data.pivotControl,					// [boolean]   false(기본값) (마우스 우클릭 혹은 멀티 터치로 pivot 이동 활성/비활성화)
+				pivotX:build.data.pivotX,				               	// [number]    0(기본값), 카메라 앵글의 피벗 포지션 x값
+				pivotY:build.data.pivotY,				               	// [number]    0(기본값), 카메라 앵글의 피벗 포지션 y값
+				pivotZ:build.data.pivotZ,				               	// [number]    0(기본값), 카메라 앵글의 피벗 포지션 z값
+				positions:build.data.positions,							// [array]     [[카메라가로각도, 카메라세로각도, 카메라 줌값], [...], ... ] (다중배열값으로 서브포지션들에 대한 각도 정보를 설정)
+				preloaderImage:build.data.preloaderImage,								// [string]    "vrism"(기본값) (혹은 로딩바에 사용될 로고 또는 사용하고자 하는 이미지의 URL)
+				preloaderSize:build.data.preloaderSize,					// [string]    "small", "medium"(기본값), "large" (프리로더 로딩바의 크기 설정)
+				preloaderType:build.data.preloaderType,					// [string]    "circle"(기본값), "bar", "text", "full" (프리로더의 로딩바 형태 설정)
+				quality:build.data.quality,								// [string]    "best"(기본값), "high", "medium", "low" (렌더링 퀄리티의 설정. 로딩 용량과는 무관. 렌더링시 시스템 리소스 사용의 최적화 관련)
+				smoothControl:build.data.smoothControl,					// [number]    1(기본값), (0~3 사이의 값 설정. 0이면 즉각반응 설정이며, 높은 수 설정일 수록 부드럽지만 느린 반응 설정)
+				themeColor:build.data.themeColor,						// [array]     ["#333333", "#AAAAAA", "#FFFFFF"](기본값) ([메인테마색(포인트), 서브테마색(기본 사용 색), 배경색])
+				zoom:build.data.zoom									// [number]    (카메라의 줌 값)
+			},
+			castingSpeed:build.data.castingSpeed,						// [number]    0 (sec 값)
+			previewBackgroundColor:build.data.previewBackgroundColor,	// [string]    "" , "transparent" ...
+			previewImage:build.data.previewImage,						// [object]    {fileName, filePath} 미리보기 이미지 (정사각 최적화. 사이즈 1080*1080)
+			userControl:build.data.userControl							// [string]    "enabled"(기본값), "disabled", "angle-handle"("handle"), "angle-zoom-handle" 사용자의 인터렉티브 방식 설정.
+		});
+		/*   =================================== vrism content viewer setting (end) ===================================   */
+		window.vrismBuild=build;window.viewer=build.con;},urlParam:function(name){var results=new RegExp('[\?&]'+name+'=([^&]*)').exec(window.location.href);if(results==null){return null;}else{return results[1].split("%20").join(" ")||0;}}}}})(jQuery);
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<header id="header">
+			<h1>Vrism 3D content viewer</h1>
+		</header>
+		<!--    ====================	3D 컨텐츠 컨테이너 영역     ====================    -->
+		<div id="vrism3DContent"></div>
+		<footer id="footer">Copyright 2018 Vrism. All Rights Reserved.</footer>
+	</div>
+</body>
+</html>
