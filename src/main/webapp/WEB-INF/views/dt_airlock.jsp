@@ -7,6 +7,17 @@
 		<meta charset="UTF-8">
     	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+		<meta name="keyword" content="르꼬끄,에어락,airlock,AIRLOCK,3D,viewer,contents,vrism,뷰어,플랫폼,브리즘">
+		<meta name="title" content="AIR LOCK">
+		<meta name="description" content="더 높이, 더 멀리. 러닝만을 위한 설계 르꼬끄 에어락">
+		<meta name="image" content="./resources/images/20FS5LC004/assets/preview_20FS5LC004.png">
+		<meta name="author" content="VRISM">
+		
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="AIR LOCK" />
+		<meta property="og:description" content="더 높이, 더 멀리. 러닝만을 위한 설계 르꼬끄 에어락" />
+		<meta property="og:url" content="https://vrism.net/lecoqsportif/airlock" />
+		<meta property="og:image" content="./resources/images/20FS5LC004/assets/preview_20FS5LC004.png">
 		<title>AIR LOCK</title>
 		<link rel="shortcut icon" href="./resources/images/favicon.ico">
 		<script src="./resources/js/jquery-3.4.1.min.js"></script>
@@ -18,7 +29,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<div id="conBg"></div>
+		<!-- <div id="conBg"></div> -->
 		<!-- <div class="parentBg">
 			<img alt="bg" src="./resources/images/bg_t.jpg">	
 		</div> -->
@@ -137,6 +148,10 @@
 						transform-origin: left top;
 						transform: scale(0.5) translate(-50%,-50%);
 					}
+					._device_desktop .con_rolling #extraItem4 {
+						transform-origin: left top;
+						transform: scale(0.5) translate(90%,-50%);
+					}
 					._device_mobile .con_rolling .extra_item img {
 						transform-origin: left top;
 						transform: scale(0.2) translate(-50%,-50%);
@@ -202,7 +217,7 @@
 						line-height:68px;
 						font-weight: 900;
 						color: black;
-						letter-spacing: -6px;
+						letter-spacing: -3px;
 						/* text-transform: uppercase; */
 						text-align: justify;
 						/* margin-bottom:22px; */
@@ -418,7 +433,7 @@
 					._device_mobile._mode_desc_view .view_template_contents div.artcl_item {
 						transition: all 1s;
 						opacity: 1;
-						visibility:visible;
+						visibility: visible;
 					}
 					._device_mobile .view_template_contents div#artclItem0 {
 						display: block;
@@ -488,19 +503,26 @@
 					
 				</style>
 				<div class="view_template_contents" id="viewContent">
+					<div id="conBg"></div>
 					<div class="con_main _sticky">
 						<div class="con_main_wrap">
 							<div class="con_rolling">
-								<!-- <div class="extra_item extra_circle extra_circle_1" id="extraItem0" data-pos-radin="0.5" data-pos-depth="1.0" data-pos-y="0.8"><img src="./resources/images/ball_w_01.png" alt="extra image"/></div>
-								<div class="extra_item extra_circle extra_circle_1" id="extraItem1" data-pos-radin="3.2" data-pos-depth="0.8" data-pos-y="0.2"><img src="./resources/images/ball_w_01.png" alt="extra image"/></div>
-								<div class="extra_item extra_circle extra_circle_1" id="extraItem2" data-pos-radin="6.1" data-pos-depth="1.1" data-pos-y="0.6"><img src="./resources/images/ball_w_01.png" alt="extra image"/></div>
-								<div class="extra_item extra_circle extra_circle_1" id="extraItem3" data-pos-radin="5.6" data-pos-depth="0.7" data-pos-y="0.4"><img src="./resources/images/ball_w_01.png" alt="extra image"/></div>
-								<div class="extra_item extra_circle extra_circle_1" id="extraItem4" data-pos-radin="4.6" data-pos-depth="0.5" data-pos-y="0.7"><img src="./resources/images/ball_w_01.png" alt="extra image"/></div>
-								<div class="extra_item extra_circle extra_circle_1" id="extraItem5" data-pos-radin="1.2" data-pos-depth="0.9" data-pos-y="0.1"><img src="./resources/images/ball_w_01.png" alt="extra image"/></div> -->
+								<div class="extra_item extra_circle extra_circle_1" id="extraItem0" data-pos-radin="0.5" data-pos-depth="1.0" data-pos-y="0.8"><img src="./resources/images/ball_w.png" alt="extra image"/></div>
+								<div class="extra_item extra_circle extra_circle_1" id="extraItem1" data-pos-radin="3.2" data-pos-depth="0.8" data-pos-y="0.2"><img src="./resources/images/ball_w.png" alt="extra image"/></div>
+								<div class="extra_item extra_circle extra_circle_1" id="extraItem2" data-pos-radin="6.1" data-pos-depth="1.1" data-pos-y="0.6"><img src="./resources/images/ball_w.png" alt="extra image"/></div>
+								<div class="extra_item extra_circle extra_circle_1" id="extraItem3" data-pos-radin="5.6" data-pos-depth="0.7" data-pos-y="0.4"><img src="./resources/images/ball_w.png" alt="extra image"/></div>
+								<!-- <div class="extra_item extra_circle extra_circle_1" id="extraItem4" data-pos-radin="4.6" data-pos-depth="0.5" data-pos-y="0.7"><img src="./resources/images/ball_w.png" alt="extra image"/></div> -->
+								<div class="extra_item extra_circle extra_circle_1" id="extraItem5" data-pos-radin="1.2" data-pos-depth="0.9" data-pos-y="0.1"><img src="./resources/images/ball_w.png" alt="extra image"/></div>
+								<!-- <div class="extra_item extra_circle extra_circle_1" id="extraItem0" data-pos-radin="0.5" data-pos-depth="1.0" data-pos-y="0.8"><img src="./resources/images/ball_o.png" alt="extra image"/></div>
+								<div class="extra_item extra_circle extra_circle_1" id="extraItem1" data-pos-radin="3.2" data-pos-depth="0.8" data-pos-y="0.2"><img src="./resources/images/ball_o.png" alt="extra image"/></div>
+								<div class="extra_item extra_circle extra_circle_1" id="extraItem2" data-pos-radin="6.1" data-pos-depth="1.1" data-pos-y="0.6"><img src="./resources/images/ball_o.png" alt="extra image"/></div>
+								<div class="extra_item extra_circle extra_circle_1" id="extraItem3" data-pos-radin="5.6" data-pos-depth="0.7" data-pos-y="0.4"><img src="./resources/images/ball_o.png" alt="extra image"/></div>
+								<div class="extra_item extra_circle extra_circle_1" id="extraItem4" data-pos-radin="4.6" data-pos-depth="0.5" data-pos-y="0.7"><img src="./resources/images/ball_o.png" alt="extra image"/></div>
+								<div class="extra_item extra_circle extra_circle_1" id="extraItem5" data-pos-radin="1.2" data-pos-depth="0.9" data-pos-y="0.1"><img src="./resources/images/ball_o.png" alt="extra image"/></div> -->
 								<div class="vrism_item" id="vrismContent"></div>
 								<div class="item_shadow"></div>
 							</div>
-							<div id="conText"></div>
+							<div id="conText"><img src="./resources/images/airlock_opa.svg" alt=""></div>
 							<div class="descrs">
 								<div class="logo_wrap">
 									<h1><a>airlock</a></h1>
