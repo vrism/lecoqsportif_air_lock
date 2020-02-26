@@ -6,20 +6,28 @@ body{
 h1{
 	margin: 0;
 }
-body div#conBg {
+.view_template_contents.vr_pos_0 div#conBg {
 	display:block;
 	left:0;
 	top:0;
 	right:0;
 	bottom:0;
 	position:fixed;
-	background-color:rgb(120,120,120);
-	background-image:url('../images/bg_m.jpg');
+	background-color:rgb(225,225,225);
+	background-image:url('../images/bg_original.jpg');
 	background-repeat:repeat-x;
 	background-attachment: fixed;
 	background-size: auto 220vh;
-	/* outline:2px solid red; */
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.6s;
 }
+.view_template_contents div#conBg{
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.6s;
+}
+
 body div.parentBg{
 	width: 160vw;
     height: 160vw;
@@ -154,14 +162,16 @@ div.artcl_item p.con_btm{
 	font-size: 24px;
 	/* font-weight: 700; */
 	text-align: justify;
+	letter-spacing: 2px;
+	line-height: 26px;
 }
-div#artclItem0::after{
+/* div#artclItem0::after{
 	content: "";
 	display: block;
 	position: absolute;	
 	
 	background: url("../images/main_shadow.png");
-}
+} */
 /* div.con_main_wrap::before{
 	content: "";
 	display: block;
@@ -313,7 +323,7 @@ div.video_wrap._video_hide_{
     position: absolute;
     right: 0;
     z-index: 999;
-    background: url(../images/main_shadow.png) no-repeat;
+    background: url(../images/bg_s.png) no-repeat;
     width: 50%;
     height: 12%;
     opacity: 1;
@@ -326,14 +336,24 @@ div.video_wrap._video_hide_{
 	top: 37vh;
 	left: 21%;
 }
-.vr_pos_4 #conText{
+
+div#conText{
+	opacity: 0;
+}
+.vr_pos_4 div#conText{
     z-index: -1;
 	position: absolute;
 	opacity: 1;
 	visibility: visible;
-    left: calc(80% - 1129px);
+	text-align: center;
+	width: 100%;
+	top: 40%;
+    /* left: calc(80% - 1129px);
     top: 40%;
     background: url(../images/airlock_opa.svg) no-repeat;
     width: 60vw;
-    height: 18vh;
+    height: 18vh; */
+}
+.vr_pos_4 div#conText img{
+	
 }
