@@ -15,6 +15,7 @@
 			setVr();
 			videoOff();
 			videoOn();
+			checkManual();
 		}
 	};
 	listener = {
@@ -94,6 +95,14 @@
 			//jQuery('.video_source')[0].currentTime();
 			jQuery('.video_source')[0].play();
 		});
+	}
+	function checkManual() {
+		var scroll = jQuery(".area_scroll"), click = jQuery(".area_click");
+		
+		setTimeout(function(){
+			scroll.addClass("_mode_off");
+			click.addClass("_mode_off");
+		}, 4000);
 	}
 	
 })(jQuery);

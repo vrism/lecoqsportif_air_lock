@@ -503,7 +503,7 @@
 					
 				</style>
 				<div class="view_template_contents" id="viewContent">
-					<div id="conBg"></div>
+					<div class="bg_area" id="conBg"></div>
 					<div class="con_main _sticky">
 						<div class="con_main_wrap">
 							<div class="con_rolling">
@@ -522,12 +522,13 @@
 								<div class="vrism_item" id="vrismContent"></div>
 								<div class="item_shadow"></div>
 							</div>
-							<div id="conText"><img src="./resources/images/airlock_opa.svg" alt=""></div>
+							<div class="end_content" id="conText"><img src="./resources/images/airlock_opa.svg" alt=""></div>
 							<div class="descrs">
 								<div class="logo_wrap">
 									<h1><a>airlock</a></h1>
 								</div>
 								<div class="btn_wrap">
+									<a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a>
 									<a class="btn_video">video</a>
 									<a href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" class="btn_buy">구매하기</a>
 								</div>
@@ -536,8 +537,9 @@
 									<a class="video_off">x</a>
 								</div>
 								<div class="navi_wrap">
+									<a class="area_click">click<span class="click_circle">O</span></a>
 									<ul class="navi_list">
-										<li class="navi_no _pagi_active_"><a href="javascript:changePage(0);void(0);" title="link to content">1</a></li>
+										<li class="navi_no"><a href="javascript:changePage(0);void(0);" title="link to content">1</a></li>
 										<li class="navi_no"><a href="javascript:changePage(1);void(0);" title="link to content">2</a></li>
 										<li class="navi_no"><a href="javascript:changePage(2);void(0);" title="link to content">3</a></li>
 										<li class="navi_no"><a href="javascript:changePage(3);void(0);" title="link to content">4</a></li>
