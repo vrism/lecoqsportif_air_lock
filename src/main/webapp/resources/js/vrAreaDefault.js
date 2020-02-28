@@ -80,13 +80,13 @@
 	}
 	function videoOff(){
 		jQuery('.video_off').on('click', function(){
-			jQuery('#omnistVideo').addClass("_video_hide_");
+			jQuery('#airlockVideo').addClass("_video_hide_");
 			jQuery('.video_source')[0].pause();
 		});
 	}
 	function videoOn(){
 		jQuery('.btn_video').on('click', function(){
-			jQuery('#omnistVideo').removeClass("_video_hide_");
+			jQuery('#airlockVideo').removeClass("_video_hide_");
 			jQuery('.video_source')[0].play();
 		});
 	}
@@ -106,18 +106,7 @@
 					click.addClass("_mode_off");
 			  }, 2000);
 			});
-			/*.then(function(result) {
-				setTimeout(function() {
-					click.addClass("_mode_on");
-				}, 3000);
-			})
-			.then(function(result) {
-				setTimeout(function() {
-					click.removeClass("_mode_on");
-					click.addClass("_mode_off");
-				}, 4000);
-				
-			});*/
+			
 	}
 	
 })(jQuery);
