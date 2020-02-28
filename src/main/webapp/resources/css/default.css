@@ -93,7 +93,7 @@ div.con_main_wrap div.btn_wrap a.btn_video{
     left: 40px;
     cursor: pointer;
 }
-div.con_main_wrap div.btn_wrap a.area_scroll{
+div.con_main_wrap div.btn_wrap a.area_scroll._mode_on{
 	width: 120px;
     height: 120px;
     position: absolute;
@@ -107,15 +107,35 @@ div.con_main_wrap div.btn_wrap a.area_scroll{
     font-family: 'sandoll 고딕th', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
     font-size: 28px;
     opacity: 1;
-    transition: opacity 1s;
+    transition: opacity 0.6s;
 }
 div.con_main_wrap div.btn_wrap a.area_scroll._mode_off{
+	width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 120px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    text-align: center;
+    line-height: 4;
+    left: calc(50% - 120px/2);
+    bottom: 0;
+    font-family: 'sandoll 고딕th', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+    font-size: 28px;
 	opacity: 0;
+	transition: opacity 0.6s;
 }
-div.con_main_wrap div.btn_wrap a.area_scroll img{
+div.con_main_wrap div.btn_wrap a.area_scroll._mode_on img{
 	position: absolute;
 	left: 29%;
 	bottom: 12px;
+}
+div.con_main_wrap div.btn_wrap a.area_scroll._mode_off img{
+	position: absolute;
+	left: 29%;
+	bottom: 12px;
+	opacity: 0;
+	transition: opacity 1s;
 }
 div.con_main_wrap div.btn_wrap a.btn_buy{
 	position: absolute;
@@ -146,8 +166,9 @@ div.con_main_wrap div.btn_wrap a.btn_buy{
 }
 
 div.artcl_item p.con_sub1{
-	font-family: 'sandoll 고딕th', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
 	font-size: 2.5vw;
+	font-weight: 400;
 	text-transform: uppercase;
 	line-height: 3.5vw;
 	margin: 0 auto;
@@ -190,7 +211,7 @@ div.artcl_item p.con_btm{
 }
 
 div.navi_wrap{}
-div.navi_wrap a.area_click{
+div.navi_wrap a.area_click._mode_on{
 	position: absolute;
     right: 28px;
     top: 44vh;
@@ -204,10 +225,23 @@ div.navi_wrap a.area_click{
     font-size: 28px;
     font-family: 'sandoll 고딕th', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
     opacity: 1;
-    transition: opacity 1s;
+    transition: opacity 0.6s;
 }
 div.navi_wrap a.area_click._mode_off{
+	position: absolute;
+    right: 28px;
+    top: 44vh;
+    width: 151px;
+    height: 66px;
+    background: rgba(141,141,141);
+    border-radius: 150px;
+    text-align: center;
+    line-height: 66px;
+    color: white;
+    font-size: 28px;
+    font-family: 'sandoll 고딕th', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
 	opacity: 0;
+	transition: opacity 0.6s;
 }
 div.navi_wrap a.area_click span.click_circle{
 	display:inline-block;
@@ -231,9 +265,13 @@ div.navi_wrap ul li.navi_no{
 	height: 30px;
 	transition: all 1s;
 	position:relative;
+	transition-timing-function: ease-in-out;
+	opacity: 0.99;
 }
 div.navi_wrap ul li.navi_no._curr{
 	height: 60px;
+	transition: all 1s;
+	opacity: 1;
 }
 div.navi_wrap ul li.navi_no a,
 div.navi_wrap ul li.navi_no a:active,
