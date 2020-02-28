@@ -12,7 +12,6 @@
 		<meta name="description" content="더 높이, 더 멀리. 러닝만을 위한 설계 르꼬끄 에어락">
 		<meta name="image" content="./resources/images/20FS5LC004/assets/preview_20FS5LC004.png">
 		<meta name="author" content="VRISM">
-		
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="AIR LOCK" />
 		<meta property="og:description" content="더 높이, 더 멀리. 러닝만을 위한 설계 르꼬끄 에어락" />
@@ -20,19 +19,15 @@
 		<meta property="og:image" content="./resources/images/20FS5LC004/assets/preview_20FS5LC004.png">
 		<title>AIR LOCK</title>
 		<link rel="shortcut icon" href="./resources/images/favicon.ico">
-		<script src="./resources/js/jquery-3.4.1.min.js"></script>
+		<script src="./resources/js/lib/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" src="https://contents.vrism.net/assets/src/blender/b4w.min.js"></script>
 		<script type="text/javascript" src="https://contents.vrism.net/assets/src/vrism/vrism.viewer.latest.test.js"></script>
-		<script src="./resources/js/stickyfill.min.js"></script>
+		<script src="./resources/js/lib/stickyfill.min.js"></script>
 		<script src="./resources/js/vrAreaDefault.js"></script>
 		<link rel="stylesheet" type="text/css" href="./resources/css/default.css">
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<!-- <div id="conBg"></div> -->
-		<!-- <div class="parentBg">
-			<img alt="bg" src="./resources/images/bg_t.jpg">	
-		</div> -->
 		<div class="vr_wrap" id="vrWrap">
 			<div class="vr_area view_template" id="vrArea">
 				<style class="view_template_style">
@@ -513,12 +508,7 @@
 								<div class="extra_item extra_circle extra_circle_1" id="extraItem3" data-pos-radin="5.6" data-pos-depth="0.7" data-pos-y="0.4"><img src="./resources/images/ball_w.png" alt="extra image"/></div>
 								<!-- <div class="extra_item extra_circle extra_circle_1" id="extraItem4" data-pos-radin="4.6" data-pos-depth="0.5" data-pos-y="0.7"><img src="./resources/images/ball_w.png" alt="extra image"/></div> -->
 								<div class="extra_item extra_circle extra_circle_1" id="extraItem5" data-pos-radin="1.2" data-pos-depth="0.9" data-pos-y="0.1"><img src="./resources/images/ball_w.png" alt="extra image"/></div>
-								<!-- <div class="extra_item extra_circle extra_circle_1" id="extraItem0" data-pos-radin="0.5" data-pos-depth="1.0" data-pos-y="0.8"><img src="./resources/images/ball_o.png" alt="extra image"/></div>
-								<div class="extra_item extra_circle extra_circle_1" id="extraItem1" data-pos-radin="3.2" data-pos-depth="0.8" data-pos-y="0.2"><img src="./resources/images/ball_o.png" alt="extra image"/></div>
-								<div class="extra_item extra_circle extra_circle_1" id="extraItem2" data-pos-radin="6.1" data-pos-depth="1.1" data-pos-y="0.6"><img src="./resources/images/ball_o.png" alt="extra image"/></div>
-								<div class="extra_item extra_circle extra_circle_1" id="extraItem3" data-pos-radin="5.6" data-pos-depth="0.7" data-pos-y="0.4"><img src="./resources/images/ball_o.png" alt="extra image"/></div>
-								<div class="extra_item extra_circle extra_circle_1" id="extraItem4" data-pos-radin="4.6" data-pos-depth="0.5" data-pos-y="0.7"><img src="./resources/images/ball_o.png" alt="extra image"/></div>
-								<div class="extra_item extra_circle extra_circle_1" id="extraItem5" data-pos-radin="1.2" data-pos-depth="0.9" data-pos-y="0.1"><img src="./resources/images/ball_o.png" alt="extra image"/></div> -->
+								
 								<div class="vrism_item" id="vrismContent"></div>
 								<div class="item_shadow"></div>
 							</div>
@@ -530,10 +520,10 @@
 								<div class="btn_wrap">
 									<a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a>
 									<a class="btn_video">video</a>
-									<a href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" class="btn_buy">구매하기</a>
+									<a href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" target="_blank" class="btn_buy">구매하기</a>
 								</div>
 								<div id="omnistVideo" class="video_wrap _video_hide_">
-									<video class="video_source" src="https://contents.vrism.net/images/Airlock_Final.mp4" controls></video>
+									<video class="video_source" src="https://contents.vrism.net/images/Airlock_Final_14.mp4" controls></video>
 									<a class="video_off">x</a>
 								</div>
 								<div class="navi_wrap">
@@ -544,8 +534,6 @@
 										<li class="navi_no"><a href="javascript:changePage(2);void(0);" title="link to content">3</a></li>
 										<li class="navi_no"><a href="javascript:changePage(3);void(0);" title="link to content">4</a></li>
 										<li class="navi_no"><a href="javascript:changePage(4);void(0);" title="link to content">5</a></li>
-										<!-- <li class="navi_no"><a href="javascript:changePage(5);void(0);" title="link to content">6</a></li>
-										<li class="navi_no"><a href="javascript:changePage(6);void(0);" title="link to content">7</a></li> -->
 									</ul>
 								</div>
 								<div class="main_nm_wrap">
@@ -556,22 +544,21 @@
 									<h2 class="con_main">air lock</h2>
 								</div>
 								<div class="artcl_item" id="artclItem1">
-									<p class="con_category _tmp_edit">feature 1</p>
-									<h4 class="con_headline _tmp_edit">매일 달려도<br/>맨발같은 쾌적함</h4>
-									<p class="con_btm">깃털처럼 부드러운 안 쪽의 샌드위치 메쉬가<br/>발 모양을 따라 꼭 맞게 감싸줍니다.</p>
+									<!-- <p class="con_category _tmp_edit">feature 1</p> -->
+									<h4 class="con_headline _tmp_edit">매일 편안한<br/>러닝을 서포트</h4>
+									<p class="con_btm">안 쪽의 샌드위치 메쉬는 발 모양을 따라<br/>부드럽게 감싸주고, 바깥쪽에 새롭게 적용된<br/>나노 프린트는 러닝에 꼭 필요한 부분만<br/>편안하게 잡아줍니다.</p>
 								</div>
 								<div class="artcl_item" id="artclItem2">
-									<p class="con_category _tmp_edit">feature 2</p>
+									<!-- <p class="con_category _tmp_edit">feature 2</p> -->
 									<h4 class="con_headline _tmp_edit">러닝만을 위한 설계<br/></h4>
-									<p class="con_btm">정교하게 설계된 삼각형 돌기 구조는<br/>발을 통해 지면을 파악할 수 있도록<br/>도와줌과 동시에 추진력을 더합니다.</p>
+									<p class="con_btm">정교하게 설계된 아웃솔 패턴은 달릴 때<br/>지면을 정확하게 파악할 수 있도록 도와주며<br/>동시에 앞으로 나아가는 추진력을 더해줍니다.</p>
 								</div>
 								<div class="artcl_item" id="artclItem3">
-									<p class="con_category _tmp_edit">feature 3</p>
+									<!-- <p class="con_category _tmp_edit">feature 3</p> -->
 									<h4 class="con_headline _tmp_edit">혁신적인 쿠셔닝 시스템</h4>
-									<p class="con_btm">최적의 위치에 압축된 질소를 주입하여 만든<br/>에어락 쿠션 시스템과 이를 감싸고 있는 비바폼이<br/>러닝 시 충격을 흡수하고 반발력을 향상시킵니다.
+									<p class="con_btm">달리는 동작을 분서해 최적의 위치에 설계된<br/>에어쿠션이 발에 전해지는 충격을 효과적으로<br/>흡수하고 다음 스텝의 에너지로 전환시킵니다.
 									</p>
 								</div>
-								<!-- <div class="artcl_item" id="artclItem4"><h4 class="con_headline _tmp_edit">air lock<br/></h4></div> -->
 							</div>
 
 						</div>
@@ -589,16 +576,8 @@
 								[5.402434539794922, 0.40048912167549133, 7.000000028368478, -0.9339706301689148, 0.3424968123435974, 0.4304385185241699],
 								[2.4000003337860107, -0.6872194409370422, 7.999999932887191, -0.128, 0.041, 0.01]
 							],
-							/* 
-								[0.21180064976215363, 0.021999239921569824, 8.999999752974356, -1.7374796867370605, -1.3855023384094238, -0.2779521644115448],
-								[1.144243812561035, -0.6187731623649597, 8.421686168556947, 0.010950956493616104, -0.248692125082016, 0.5388530492782593],
-								[1.3176153302192688, 1.494508981704712, 5.980334576749868, 0.10311078280210495, 0.8693609833717346, -0.37355461716651917],
-								[5.402434539794922, 0.40048912167549133, 7.000000028368478, -0.9339706301689148, 0.3424968123435974, 0.4304385185241699],
-								[2.286655650138855, -0.47442248463630676, 7.719181441227674, -1.2015880346298218, 0.2712009847164154, -0.9245594143867493],
-								[0.50, -0.15, 8.8, -1.5, -0.62, 0.19],
-								[0.1, 0, 9.5, -0.128, 0.041, 0.029]
-							], */
-							degree:40,
+							
+							degree:0,
 							scrollStep:1800
 						},
 						mb:{
