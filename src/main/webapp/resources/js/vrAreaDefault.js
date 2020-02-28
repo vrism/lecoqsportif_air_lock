@@ -34,7 +34,6 @@
 		var _isMobile=(navigator.userAgent.match(/(iPhone|iPad|iPod|Android|Windows Phone|IEMobile|BlackBerry|Mobile Safari|Opera Mobi)/)?true:false);
 		if(_isMobile) {vr.device = "mobile"; device ="mb";}
 		else {vr.device = "desktop"; device ="dt";}
-		console.log("checkDevice",vr.device);
 	}
 	function setVr() {
 		vr.data={};
@@ -55,8 +54,6 @@
 		checkDevice();
 		if (device=="dt") setSticky();
 		vrd = vr[device];
-		console.log(device);
-		console.log("vrd : ",vrd);
 		vr.container = ssq("#vrWrap");
 		vr.container.addClass("_device_"+vr.device);
 		var vrURL = './resources/'+vr.cid+'/assets/';
@@ -66,10 +63,8 @@
 			success: function(data){
 				var cfg = {};
 				vr.jsonPath = vrURL+data.jsonPath.split("./assets/").join("");
-//				console.log("data.jsonPath : ",data.jsonPath);
 				ssq.getScript("./resources/js/template/"+vr.type+".js", function(){
 					buildViewer(vr.vrismOption);
-//					console.log("vr.vrismOption : ",vr.vrismOption);
 				});
 			}
 		});
@@ -92,17 +87,37 @@
 	function videoOn(){
 		jQuery('.btn_video').on('click', function(){
 			jQuery('#omnistVideo').removeClass("_video_hide_");
-			//jQuery('.video_source')[0].currentTime();
 			jQuery('.video_source')[0].play();
 		});
 	}
 	function checkManual() {
 		var scroll = jQuery(".area_scroll"), click = jQuery(".area_click");
-		
-		setTimeout(function(){
-			scroll.addClass("_mode_off");
-			click.addClass("_mode_off");
-		}, 4000);
+		new Promise(function(resolve, reject){
+			  setTimeout(function() {
+			    resolve(scroll.addClass("_mode_on"));
+			    click.addClass("_mode_on");
+			  }, 2000);
+			})
+			.then(function(result) {
+			  setTimeout(function() {
+				    scroll.removeClass("_mode_on");
+				    scroll.addClass("_mode_off");
+				    click.removeClass("_mode_on");
+					click.addClass("_mode_off");
+			  }, 2000);
+			});
+			/*.then(function(result) {
+				setTimeout(function() {
+					click.addClass("_mode_on");
+				}, 3000);
+			})
+			.then(function(result) {
+				setTimeout(function() {
+					click.removeClass("_mode_on");
+					click.addClass("_mode_off");
+				}, 4000);
+				
+			});*/
 	}
 	
 })(jQuery);
