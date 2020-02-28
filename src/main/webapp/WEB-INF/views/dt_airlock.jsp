@@ -31,22 +31,7 @@
 		<div class="vr_wrap" id="vrWrap">
 			<div class="vr_area view_template" id="vrArea">
 				<style class="view_template_style">
-					@font-face {
-					    font-family: 'League Gothic';
-					    src: url('./resources/font/leaguegothic-regular-webfont.eot');
-					    src: url('./resources/font/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-					         url('./resources/font/leaguegothic-regular-webfont.woff') format('woff'),
-					         url('./resources/font/leaguegothic-regular-webfont.ttf') format('truetype'),
-					         url('./resources/font/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
-					    font-weight: normal;
-					    font-style: normal;
-					}
-					@font-face {
-						font-family: 'sandoll 고딕th';
-						src: url('./resources/font/SDlecoqGothicNeoaTTF-aTh.woff2') format('woff2');
-						font-weight: normal;
-						 font-style: normal;
-					}
+					
 					.vr_wrap .vr_area {
 						min-height:100vh;
 					}
@@ -66,9 +51,7 @@
 						z-index:9999;
 					}
 					._mode_start .view_template_contents {
-						/* background:rgb(120,120,120) url('./resources/images/bg_m.jpg') repeat-x;
-						background-size: auto 220vh;
-						background-attachment: fixed; */
+						
 						perspective-origin: center;
 						transition : background-color 3s;
 					}
@@ -180,19 +163,7 @@
 						text-align: center;
 					}
 					/* desktop descriptions */
-					._device_desktop .con_main .descrs .artcl_item p.con_category {
-						font-size:24px;
-						font-weight: normal;
-						font-family: 'League Gothic','Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
-						color: #ED533E;
-						text-transform: uppercase;
-						text-align: justify;
-						letter-spacing: 1px;
-						margin-bottom:18px;
-						white-space: nowrap;
-						background-color:transparent;
-						border:0 none;
-					}
+					
 					._device_desktop .con_main .descrs .artcl_item h3.con_headline {
 						font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
 						font-size:30px;
@@ -213,26 +184,13 @@
 						font-weight: 900;
 						color: black;
 						letter-spacing: -3px;
-						/* text-transform: uppercase; */
 						text-align: justify;
-						/* margin-bottom:22px; */
 						margin: 0;
 						white-space: nowrap;
 						background-color:transparent;
 						border:0 none;
 					}
-					._device_desktop .con_main .descrs .artcl_item p.con_description {
-						font-size:12px;
-						line-height:24px;
-						font-weight: normal;
-						font-family: 'futurademregular','Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
-						color:white;
-						text-align:center;
-						margin-bottom:25px;
-						white-space: nowrap;
-						background-color:transparent;
-						border:0 none;
-					}
+					
 					._device_desktop .con_main .descrs .artcl_item p.con_bot {
 						font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
 						font-weight: 400;
@@ -279,32 +237,16 @@
 					._device_desktop .view_template_contents div#artclItem1 {
 						top: 24vh;
 						left: 17.5%;
-						/* top: 264px;
-						left: 25%;
-						transform:translate(-50%, -50%); */
 					}
 					._device_desktop .view_template_contents div#artclItem2 {
 						top: 43vh;
 						left: 56%;
-						/* transform:translate(-50%, -50%); */
 					}
 					._device_desktop .view_template_contents div#artclItem3 {
 						top: 39vh;
 						left: 14%;
-						/* transform:translate(-50%, -50%); */
 					}
-					._device_desktop .view_template_contents div#artclItem4 {
-						top: 37vh;
-						left: 21%;
-						text-align: justify;
-						/* transform:translate(-50%, -50%); */
-					}
-					._device_desktop .view_template_contents div#artclItem5 {
-						top: 25vh;
-						left: 18%;
-						text-align: justify;
-						/* transform:translate(-50%, -50%); */
-					}
+					
 					._device_desktop .view_template_contents.vr_pos_0 div#artclItem0 {
 						opacity: 1;
 						visibility: visible;
@@ -321,15 +263,7 @@
 						opacity: 1;
 						visibility: visible;
 					}
-					._device_desktop .view_template_contents.vr_pos_4 div#artclItem4 {
-						opacity: 1;
-						visibility: visible;
-					}
-					._device_desktop .view_template_contents.vr_pos_5 div#artclItem5 {
-						opacity: 1;
-						visibility: visible;
-					}
-
+					
 					/* mobile descriptions */
 					._device_mobile .con_main .descrs .artcl_item p.con_category {
 						font-size:24px;
@@ -402,14 +336,12 @@
 						white-space: unset;
 						word-break: keep-all;
 					}
-					._device_mobile .con_main .descrs .artcl_item p.con_description {
-						display: none;
-					}
+					
 					._device_mobile .con_main .descrs .artcl_item a.con_linkbtn {
 						display:none;
 					}
 					._device_mobile .con_main .descrs .artcl_item p.con_btm {
-						font-family: 'League Gothic', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+						font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
 						font-size: 14px;
 						font-weight: 700;
 						text-align: left;
@@ -433,9 +365,7 @@
 					._device_mobile .view_template_contents div#artclItem0 {
 						display: block;
 					}
-					._device_mobile .view_template_contents div#artclItem0 p.con_description {
-						display: block;
-					}
+					
 					._device_mobile .view_template_contents div#artclItem1 {
 						display: block;
 					}
@@ -447,12 +377,7 @@
 					._device_mobile .view_template_contents div#artclItem3 {
 						display: block;
 					}
-					._device_mobile .view_template_contents div#artclItem4 {
-						display: block;
-					}
-					._device_mobile .view_template_contents div#artclItem5 {
-						display: block;
-					}
+					
 					._device_mobile._view_desc .view_template_contents.vr_pos_0 div#artclItem0 {
 						opacity: 1;
 						visibility: visible;
@@ -482,19 +407,6 @@
 						top: 14vh;
     					z-index: 0;
 					}
-					._device_mobile .view_template_contents.vr_pos_4 div#artclItem4 {
-						opacity: 1;
-						visibility: visible;
-						top: 14vh;
-    					z-index: 0;
-					}
-					._device_mobile .view_template_contents.vr_pos_5 div#artclItem5 {
-						opacity: 1;
-						visibility: visible;
-						top: 58vh;
-    					z-index: 0;
-						
-					}
 					
 				</style>
 				<div class="view_template_contents" id="viewContent">
@@ -512,17 +424,17 @@
 								<div class="vrism_item" id="vrismContent"></div>
 								<div class="item_shadow"></div>
 							</div>
-							<div class="end_content" id="conText"><img src="./resources/images/airlock_opa.svg" alt=""></div>
+							<div class="end_content" id="conText"><img src="./resources/images/airlock_opa.svg" alt="airlock back image"></div>
 							<div class="descrs">
 								<div class="logo_wrap">
-									<h1><a>airlock</a></h1>
+									<h1><a href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" title="link to content">airlock</a></h1>
 								</div>
 								<div class="btn_wrap">
 									<a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a>
-									<a class="btn_video">video</a>
-									<a href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" target="_blank" class="btn_buy">구매하기</a>
+									<a class="btn_video" title="link to content">video</a>
+									<a class="btn_buy" href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" target="_blank" title="link to content">구매하기</a>
 								</div>
-								<div id="omnistVideo" class="video_wrap _video_hide_">
+								<div id="airlockVideo" class="video_wrap _video_hide_">
 									<video class="video_source" src="https://contents.vrism.net/images/Airlock_Final_14.mp4" controls></video>
 									<a class="video_off">x</a>
 								</div>
@@ -544,17 +456,14 @@
 									<h2 class="con_main">air lock</h2>
 								</div>
 								<div class="artcl_item" id="artclItem1">
-									<!-- <p class="con_category _tmp_edit">feature 1</p> -->
 									<h4 class="con_headline _tmp_edit">매일 편안한<br/>러닝을 서포트</h4>
 									<p class="con_btm">안 쪽의 샌드위치 메쉬는 발 모양을 따라<br/>부드럽게 감싸주고, 바깥쪽에 새롭게 적용된<br/>나노 프린트는 러닝에 꼭 필요한 부분만<br/>편안하게 잡아줍니다.</p>
 								</div>
 								<div class="artcl_item" id="artclItem2">
-									<!-- <p class="con_category _tmp_edit">feature 2</p> -->
 									<h4 class="con_headline _tmp_edit">러닝만을 위한 설계<br/></h4>
 									<p class="con_btm">정교하게 설계된 아웃솔 패턴은 달릴 때<br/>지면을 정확하게 파악할 수 있도록 도와주며<br/>동시에 앞으로 나아가는 추진력을 더해줍니다.</p>
 								</div>
 								<div class="artcl_item" id="artclItem3">
-									<!-- <p class="con_category _tmp_edit">feature 3</p> -->
 									<h4 class="con_headline _tmp_edit">혁신적인 쿠셔닝 시스템</h4>
 									<p class="con_btm">달리는 동작을 분서해 최적의 위치에 설계된<br/>에어쿠션이 발에 전해지는 충격을 효과적으로<br/>흡수하고 다음 스텝의 에너지로 전환시킵니다.
 									</p>
