@@ -19,13 +19,13 @@
 		<meta property="og:image" content="./resources/images/20FS5LC004/assets/preview_20FS5LC004.png">
 		<title>AIR LOCK</title>
 		<link rel="shortcut icon" href="./resources/images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="./resources/css/dt_airlock.css">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap" rel="stylesheet">
 		<script src="./resources/js/lib/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" src="https://contents.vrism.net/assets/src/blender/b4w.min.js"></script>
 		<script type="text/javascript" src="https://contents.vrism.net/assets/src/vrism/vrism.viewer.latest.test.js"></script>
 		<script src="./resources/js/lib/stickyfill.min.js"></script>
 		<script src="./resources/js/vrAreaDefault.js"></script>
-		<link rel="stylesheet" type="text/css" href="./resources/css/default.css">
-		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<div class="vr_wrap" id="vrWrap">
@@ -439,7 +439,7 @@
 									<a class="video_off">x</a>
 								</div>
 								<div class="navi_wrap">
-									<a class="area_click">click<span class="click_circle">O</span></a>
+									<a class="area_click">click</a>
 									<ul class="navi_list">
 										<li class="navi_no"><a href="javascript:changePage(0);void(0);" title="link to content">1</a></li>
 										<li class="navi_no"><a href="javascript:changePage(1);void(0);" title="link to content">2</a></li>
