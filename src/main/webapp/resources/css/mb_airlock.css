@@ -276,8 +276,8 @@ div.navi_wrap ul li.navi_no a::after {
 
 div.main_nm_wrap{
 	position: absolute;
-	top: 40px;
-    right: 40px;
+	top: 20px;
+    right: 20px;
     opacity: 0;
     transition: opacity 1s;
 }
@@ -292,17 +292,13 @@ div.main_nm_wrap p.con_sub1{
 div.main_nm_wrap p.con_main{
 	font-size: 0;
 	margin: 0;
-	background: url("../images/airlock_top.svg") no-repeat;
-	width: 230px;
-	height: 34px;
+	background: url("../images/mb/m_top_airlock.svg") no-repeat;
+	width: 128px;
+	height: 20px;
 }
 body._page_no_1 div.main_nm_wrap,
 body._page_no_2 div.main_nm_wrap,
-body._page_no_3 div.main_nm_wrap,
-body._page_no_4 div.main_nm_wrap,
-body._page_no_5 div.main_nm_wrap,
-body._page_no_6 div.main_nm_wrap,
-body._page_no_7 div.main_nm_wrap{
+body._page_no_3 div.main_nm_wrap{
 	opacity: 1;
 }
 
@@ -356,11 +352,10 @@ div.end_content{
 	position: absolute;
 	text-align: center;
 	width: 100%;
-	top: 40%;
+	top: 47%;
 	opacity: 0;
 	transition: all 0.6s;
 }
-div.end_content img{ width: 60%;}
 .vr_pos_4 div.end_content{
     z-index: -1;
 	position: absolute;
@@ -368,9 +363,10 @@ div.end_content img{ width: 60%;}
 	visibility: visible;
 	text-align: center;
 	width: 100%;
-	top: 40%;
+	top: 47%;
    
 }
+div.end_content img{ width: 90%;}
 .vr_pos_4 div#conText img{
-	width: 60%
+	width: 90%
 }
