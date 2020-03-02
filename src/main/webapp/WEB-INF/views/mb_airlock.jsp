@@ -28,9 +28,20 @@
 		<script src="./resources/js/vrAreaDefault.js"></script>
 	</head>
 	<body>
+		<div class="bg_area" id="conBg"></div>
 		<div class="vr_wrap" id="vrWrap">
 			<div class="vr_area view_template" id="vrArea">
 				<style class="view_template_style">
+					._sticky {
+					    position: -webkit-sticky;
+					    position: sticky;
+					    top: 0;
+					}
+					._sticky:before,
+					._sticky:after {
+					    content: '';
+					    display: table;
+					}
 					
 					.vr_wrap .vr_area {
 						min-height:100vh;
@@ -284,7 +295,6 @@
 						line-height:36px;
 						font-weight: 900;
 						color: black;
-						letter-spacing: -2px;
 						text-align: justify;
 						margin: 0;
 						white-space: nowrap;
@@ -412,7 +422,7 @@
 					
 				</style>
 				<div class="view_template_contents" id="viewContent">
-					<div class="bg_area" id="conBg"></div>
+					<!-- <div class="bg_area" id="conBg"></div> -->
 					<div class="con_main _sticky">
 						<div class="con_main_wrap">
 							<div class="con_rolling">
@@ -432,7 +442,7 @@
 									<h1><a href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" title="link to content">airlock</a></h1>
 								</div>
 								<div class="btn_wrap">
-									<!-- <a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a> -->
+									<a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a>
 									<a class="btn_video" title="link to content">video</a>
 									<a class="btn_buy" href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" target="_blank" title="link to content">구매하기</a>
 								</div>
@@ -441,7 +451,7 @@
 									<a class="video_off">x</a>
 								</div>
 								<div class="navi_wrap">
-									<!-- <a class="area_click">click</a> -->
+									<a class="area_click">click</a>
 									<ul class="navi_list">
 										<li class="navi_no"><a href="javascript:changePage(0);void(0);" title="link to content">1</a></li>
 										<li class="navi_no"><a href="javascript:changePage(1);void(0);" title="link to content">2</a></li>
@@ -493,10 +503,10 @@
 						},
 						mb:{
 							position:[
-								[3.1, 0, 7.5, -0.128, 0.041, 0.3],
-								[2.2,0.3, 6.653601835438044, 0, -0, 0.30000001192092896],
-								[0.8552609086036682, 1.8905259370803833, 9.999999946170468, 0.4, -0.5, 4.8],
-								[-1, -0.3, 5.5, -0.7,-0.1,0.8],
+								[3.1, 0, 7, -0.128, 0.041, 0.3],
+								[2.2,0.1, 6.5, 0,-0,0.4],
+								[1,1.9, 8, 0,0,2],
+								[-1, -0.1, 6, -0.7,-0.2,0.8],
 								[2.3,-0.3, 5.7, 0.5, 0.5, -0.3]
 								/* [0.21180064976215363, 0.021999239921569824, 7.943977862881471, -0.2, 0.3, 0.9], //0
 								[2.8070664405822754, -0.3189876973628998, 5.559190342321084, 0,-0, 1.1], // 1
