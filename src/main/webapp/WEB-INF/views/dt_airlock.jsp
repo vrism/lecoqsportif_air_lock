@@ -20,12 +20,14 @@
 		<title>AIR LOCK</title>
 		<link rel="shortcut icon" href="./resources/images/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="./resources/css/dt_airlock.css">
-		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap" rel="stylesheet">
 		<script src="./resources/js/lib/jquery-3.4.1.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
 		<script type="text/javascript" src="https://contents.vrism.net/assets/src/blender/b4w.min.js"></script>
 		<script type="text/javascript" src="https://contents.vrism.net/assets/src/vrism/vrism.viewer.latest.test.js"></script>
-		<script src="./resources/js/lib/stickyfill.min.js"></script>
+		<!-- <script src="./resources/js/lib/stickyfill.min.js"></script> -->
 		<script src="./resources/js/vrAreaDefault.js"></script>
+		<!-- <script src="./resources/js/lib/require.js"></script> -->
+		<!-- <script src="./resources/js/vrArea.js"></script> -->
 	</head>
 	<body>
 		<div class="vr_wrap" id="vrWrap">
@@ -52,12 +54,12 @@
 					}
 					._mode_start .view_template_contents {
 						
-						perspective-origin: center;
+						/* perspective-origin: center; */
 						transition : background-color 3s;
 					}
 					._mode_start._device_desktop .view_template_contents {
 						height:calc(100vh + (1800px * 4) + 600px);
-						perspective: 300px;
+						/* perspective: 300px; */
 					}
 					._mode_start._device_mobile .view_template_contents {
 						height:calc(100vh + (800px * 6) + 200px);
@@ -135,9 +137,11 @@
 						transform: scale(0.2) translate(-50%,-50%);
 					}
 					.con_main {
-						position: -webkit-sticky;
-						position: sticky;
-						top:0;
+						/* position: -webkit-sticky; */
+						position: fixed;
+						width: 100vw;
+						left: 0;
+						/* top:0; */
 					}
 					.con_main .con_main_wrap {
 						width:100%;
@@ -227,11 +231,9 @@
 						z-index: 2;
 					}
 					._device_desktop .view_template_contents div#artclItem0 {
-						/* top: 224px; */
-						top: 25vh;
-						left: 50%;
+						width: 100%;
+						/* left: calc((100% - 680px)/2); */
 						z-index: 2;
-						transform:translate(-50%, -50%);
 					}
 					
 					._device_desktop .view_template_contents div#artclItem1 {
@@ -280,7 +282,7 @@
 					}
 					._device_mobile .con_main .descrs .artcl_item h4.con_headline {
 					
-						font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+						font-family: 'Nanum Gothic', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
 						font-size:44px;
 						line-height:48px;
 						font-weight: 900;
@@ -430,16 +432,16 @@
 									<h1><a href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" title="link to content">airlock</a></h1>
 								</div>
 								<div class="btn_wrap">
-									<a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a>
-									<a class="btn_video" title="link to content">video</a>
+									<!-- <a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a> -->
+									<!-- <a class="btn_video" title="link to content">video</a> -->
 									<a class="btn_buy" href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" target="_blank" title="link to content">구매하기</a>
 								</div>
-								<div id="airlockVideo" class="video_wrap _video_hide_">
+								<!-- <div id="airlockVideo" class="video_wrap _video_hide_">
 									<video class="video_source" src="https://contents.vrism.net/images/Airlock_Final_14.mp4" controls></video>
 									<a class="video_off">x</a>
-								</div>
+								</div> -->
 								<div class="navi_wrap">
-									<a class="area_click">click</a>
+									<!-- <a class="area_click">click</a> -->
 									<ul class="navi_list">
 										<li class="navi_no"><a href="javascript:changePage(0);void(0);" title="link to content">1</a></li>
 										<li class="navi_no"><a href="javascript:changePage(1);void(0);" title="link to content">2</a></li>
@@ -449,11 +451,14 @@
 									</ul>
 								</div>
 								<div class="main_nm_wrap">
-									<p class="con_main">air lock</p>
+									<p class="main_nm">air lock</p>
 								</div>
 								<div class="artcl_item" id="artclItem0">
 									<p class="con_sub1">더 높이, 더 멀리.</p>
-									<h2 class="con_main">air lock</h2>
+									<h2 class="main_nm">air lock</h2>
+									<a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a>
+									<a class="area_click">click</a>
+									
 								</div>
 								<div class="artcl_item" id="artclItem1">
 									<h4 class="con_headline _tmp_edit">매일 편안한<br/>러닝을 서포트</h4>
@@ -465,7 +470,7 @@
 								</div>
 								<div class="artcl_item" id="artclItem3">
 									<h4 class="con_headline _tmp_edit">혁신적인 쿠셔닝 시스템</h4>
-									<p class="con_btm">달리는 동작을 분서해 최적의 위치에 설계된<br/>에어쿠션이 발에 전해지는 충격을 효과적으로<br/>흡수하고 다음 스텝의 에너지로 전환시킵니다.
+									<p class="con_btm">달리는 동작을 분석해 최적의 위치에 설계된<br/>에어쿠션이 발에 전해지는 충격을 효과적으로<br/>흡수하고 다음 스텝의 에너지로 전환시킵니다.
 									</p>
 								</div>
 							</div>
@@ -479,7 +484,7 @@
 						type:"rotation_3position_1",
 						dt:{
 							position:[
-								[3.1, 0, 9.5, -0.128, 0.041, 0.3],
+								[3.1, 0, 9, -0.128, 0.041, 0.1],
 								[2.4000003337860107, -0.6872194409370422, 7.999999932887191, 1, -0.4000000059604645, -0.10000000149011612],
 								[1.3176153302192688, 1.494508981704712, 7.980334576749868, 0.10311078280210495, 0.8693609833717346, -0.37355461716651917],
 								[5.402434539794922, 0.40048912167549133, 7.000000028368478, -0.9339706301689148, 0.3424968123435974, 0.4304385185241699],

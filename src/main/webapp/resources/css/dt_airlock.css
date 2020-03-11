@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
+html{}
 body{
 	margin: 0;
 }
+::-webkit-scrollbar { display: none !important; }
 h1{
 	margin: 0;
 }
@@ -37,7 +39,7 @@ a:hover{
 	background-color:rgb(225,225,225);
 	background-image:url('../images/bg_original.jpg');
 	background-repeat:repeat-x;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 	background-size: auto 220vh;
 	opacity: 0;
 	transition: all 0.6s;
@@ -48,10 +50,10 @@ div.con_main_wrap div.logo_wrap{
     left: 40px;
 }
 div.con_main_wrap div.logo_wrap h1{
-	width: 109px;
-    height: 120px;
+	width: 70px;
+    height: 77px;
     display: block;
-    background: url(../images/logo.svg) no-repeat;
+    background: url(../images/dt_logo.svg) no-repeat;
 }
 div.con_main_wrap div.logo_wrap h1 a{
     font-size: 0;
@@ -61,12 +63,13 @@ div.con_main_wrap div.logo_wrap h1 a{
 }
 div.con_main_wrap div.btn_wrap{
 	position: absolute;
-    left: 50%;
-    top: 90vh;
-    width: 100%;
-    height: 80px;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+	/* left: calc((100% - 136px)/2); */
+	top: 91vh;
+	width: 100%;
+	height: 56px;
+	/* transform: translate(-50%, -50%); */
+	z-index: 99;
+	/* text-align: center; */
 }
 div.con_main_wrap div.btn_wrap a{}
 div.con_main_wrap div.btn_wrap a.btn_video{
@@ -78,63 +81,45 @@ div.con_main_wrap div.btn_wrap a.btn_video{
     left: 40px;
     cursor: pointer;
 }
-div.con_main_wrap div.btn_wrap a.area_scroll._mode_on{
-	width: 120px;
-    height: 120px;
-    position: absolute;
-    border-radius: 120px;
-    background: rgba(0,0,0,0.4);
-    color: white;
-    text-align: center;
-    line-height: 4;
-    left: calc(50% - 120px/2);
-    bottom: 0;
-    font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
-    font-size: 28px;
-    opacity: 1;
-    transition: opacity 0.6s;
-}
-div.con_main_wrap div.btn_wrap a.area_scroll._mode_off{
-	width: 120px;
-    height: 120px;
-    position: absolute;
-    border-radius: 120px;
-    background: rgba(0,0,0,0.4);
-    color: white;
-    text-align: center;
-    line-height: 4;
-    left: calc(50% - 120px/2);
-    bottom: 0;
-    font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
-    font-size: 28px;
-	opacity: 0;
+div#artclItem0 a.area_scroll{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	border-radius: 100px;
+	background: rgba(0,0,0,0.4);
+	color: white;
+	text-align: center;
+	line-height: 4;
+	left: calc(50% - 100px/2);
+	top: 77vh;
+	font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	opacity: 1;
 	transition: opacity 0.6s;
 }
-div.con_main_wrap div.btn_wrap a.area_scroll._mode_on img{
+
+div#artclItem0 a.area_scroll img{
 	position: absolute;
+	width: 40px;
+	height: 40px;
 	left: 29%;
 	bottom: 12px;
 }
-div.con_main_wrap div.btn_wrap a.area_scroll._mode_off img{
-	position: absolute;
-	left: 29%;
-	bottom: 12px;
-	opacity: 0;
-	transition: opacity 1s;
-}
+
 div.con_main_wrap div.btn_wrap a.btn_buy{
 	position: absolute;
-	width: 210px;
-	height: 62px;
-	font-size: 30px;
-	right: 40px;
-	background: #000;
+	width: 136px;
+	height: 42px;
+	font-size: 18px;
+	left: calc((100% - 136px)/2);
+	background: rgba(0,0,0,0.7);
 	border-radius: 174px;
 	text-decoration: none;
 	color: white;
 	text-align: center;
-	padding-top: 18px;
-	font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	padding-top: 14px;
+	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
 	z-index: 999;
 }
@@ -153,24 +138,32 @@ div.con_main_wrap div.btn_wrap a.btn_buy{
 div.artcl_item p.con_sub1{
 	font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
 	font-size: 2.5vw;
-	font-weight: 500;
+	font-weight: 700;
 	text-transform: uppercase;
 	line-height: 3.5vw;
 	margin: 0 auto;
+	top: 12vh;
+	position: absolute;
+	text-align: center;
+	width: 100%;
 }
-div.artcl_item h2.con_main{
+div.artcl_item h2.main_nm{
 	font-size: 0;
 	background: url("../images/airlock.svg") no-repeat;
 	margin: 0;
 	text-transform: uppercase;
-	width: 772px;
-	height: 115px;
+	width: 680px;
+	height: 101px;
+	left: calc((100% - 680px)/2);
+	margin: 0 auto;
+	top: 19vh;
+	position: absolute;
 }
 
 div.artcl_item p.con_btm{
 	font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
 	font-size: 24px;
-	font-weight: 400;
+	font-weight: 300;
 	text-align: justify;
 	letter-spacing: 2px;
 	line-height: 26px;
@@ -188,39 +181,26 @@ div.artcl_item p.con_btm{
 }
 
 div.navi_wrap{}
-div.navi_wrap a.area_click._mode_on{
+div#artclItem0 a.area_click{
 	position: absolute;
-    right: 28px;
-    top: 44vh;
-    width: 151px;
-    height: 66px;
-    background: rgba(141,141,141);
-    border-radius: 150px;
-    text-align: center;
-    line-height: 66px;
-    color: white;
-    font-size: 28px;
-    font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
-    opacity: 1;
-    transition: opacity 0.6s;
-}
-div.navi_wrap a.area_click._mode_off{
-	position: absolute;
-    right: 28px;
-    top: 44vh;
-    width: 151px;
-    height: 66px;
-    background: rgba(141,141,141);
-    border-radius: 150px;
-    text-align: center;
-    line-height: 66px;
-    color: white;
-    font-size: 28px;
-    font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
-	opacity: 0;
+	left: calc((100% - (100vw - 40px))/2);
+	top: calc((100vh - 136px)/2);
+	width: 121px;
+	height: 66px;
+	background: rgba(141,141,141,0.8);
+	border-radius: 150px;
+	text-align: right;
+	padding-right: 35px;
+	line-height: 66px;
+	color: white;
+	font-size: 20px;
+	font-weight: 100;
+	font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	opacity: 1;
 	transition: opacity 0.6s;
 }
-div.navi_wrap a.area_click span.click_circle{
+
+div#artclItem0 a.area_click span.click_circle{
 	display:inline-block;
 	width:22px;
 	height:22px;
@@ -232,46 +212,61 @@ div.navi_wrap a.area_click span.click_circle{
 	position: absolute;
 }
 div.navi_wrap ul{
-	right: 40px;
-    position: absolute;
-    top: 38vh;
-    list-style: none;
-    z-index: 90;
+	left: 40px;
+	position: absolute;
+	top: calc((100vh - 210px)/2);
+	list-style: none;
+	z-index: 90;
+	margin: 0;
+	padding: 0;
 }
 div.navi_wrap ul li.navi_no{
 	width: 30px;
 	height: 30px;
-	transition: all 1s;
 	position:relative;
+	border-radius: 20px;
+	background-color: rgb(255,186,177);
+	margin-top: 12px;
+	opacity: 0.98;
+	transition: all 1s;
 	transition-timing-function: ease-in-out;
-	opacity: 0.99;
+	
 }
 div.navi_wrap ul li.navi_no._curr{
-	height: 60px;
-	transition: all 1s;
-	opacity: 1;
+	background-color: rgba(237,83,62,0.9);
+    box-sizing: border-box;
+    opacity: 0.99;
+    /* transition: background-color 1s; */
+}
+div.navi_wrap ul li.navi_no._curr a,
+div.navi_wrap ul li.navi_no._curr a:active,
+div.navi_wrap ul li.navi_no._curr a:focus,
+div.navi_wrap ul li.navi_no._curr a:hover{
+	color: #000;
 }
 div.navi_wrap ul li.navi_no a,
 div.navi_wrap ul li.navi_no a:active,
 div.navi_wrap ul li.navi_no a:focus,
 div.navi_wrap ul li.navi_no a:hover {
-	font-size: 0;
-	cursor: pointer;
-	display:inline-block;
-	width:100%;
-	height:100%;
-	padding: 8px;
-	box-sizing:border-box;
+	font-size: 12px;
+	color: rgb(255,255,255);
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-div.navi_wrap ul li.navi_no a::after {
+/* div.navi_wrap ul li.navi_no a::after {
 	content:"";
 	display:inline-block;
 	width:15px;
 	height:calc(100% - 0px);
 	background-color: rgb(90,90,90);
 	border-radius: 20px;
-}
+} */
 
 div.main_nm_wrap{
 	position: absolute;
@@ -288,12 +283,13 @@ div.main_nm_wrap p.con_sub1{
 	margin: 0 auto;
 	text-align: center;
 }
-div.main_nm_wrap p.con_main{
+div.main_nm_wrap p.main_nm{
 	font-size: 0;
 	margin: 0;
 	background: url("../images/airlock_top.svg") no-repeat;
 	width: 230px;
 	height: 34px;
+	position: relative;
 }
 body._page_no_1 div.main_nm_wrap,
 body._page_no_2 div.main_nm_wrap,
@@ -372,4 +368,17 @@ div.end_content img{ width: 60%;}
 }
 .vr_pos_4 div#conText img{
 	width: 60%
+}
+
+/* responsive css add */ 
+@media screen and (max-width: 1500px){
+	._device_desktop .view_template_contents div#artclItem1 {
+		top: 24vh !important;
+		left: 11.5% !important;
+	}
+	div.artcl_item p.con_btm{ font-size: 22px; letter-spacing: 0px;}
+	._device_desktop .view_template_contents div#artclItem3 {
+		top: 22vh !important;
+		left: 11.5% !important;
+	}
 }
