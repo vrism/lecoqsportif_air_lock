@@ -6,6 +6,7 @@ body{
 h1{
 	margin: 0;
 }
+::-webkit-scrollbar { display: none !important; }
 a:link,
 a:visited,
 a:hover{
@@ -42,36 +43,7 @@ body div.bg_area{
 	opacity: 0;
 	transition: all 0.6s;
 }
-/* ._device_mobile .view_template_contents.vr_pos_0 div#conBg {
-	display:block;
-	left:0;
-	top:0;
-	right:0;
-	bottom:0;
-	position:fixed;
-	background-color:rgb(225,225,225);
-	background-image:url('../images/mb/bg_original.jpg');
-	background-repeat:repeat-x;
-	background-attachment: fixed;
-	background-size: auto 220vh;
-	opacity: 1;
-	visibility: visible;
-}
-._device_mobile .view_template_contents div.bg_area{
-	display:block;
-	left:0;
-	top:0;
-	right:0;
-	bottom:0;
-	position:fixed;
-	background-color:rgb(225,225,225);
-	background-image:url('../images/mb/bg_original.jpg');
-	background-repeat:repeat-x;
-	background-attachment: fixed;
-	background-size: auto 220vh;
-	opacity: 0;
-	transition: all 0.6s;
-} */
+
 div.con_main_wrap div.logo_wrap{
 	position: absolute;
 	top: 20px;
@@ -109,23 +81,24 @@ div.con_main_wrap div.btn_wrap a.btn_video{
     cursor: pointer;
     z-index: 99;
 }
-div.con_main_wrap div.btn_wrap a.area_scroll._mode_on{
+._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 a.area_scroll{
 	width: 77px;
-    height: 77px;
-    position: absolute;
-    border-radius: 77px;
-    background: rgba(0,0,0,0.4);
-    color: white;
-    text-align: center;
-    line-height: 4;
-    left: calc(50% - 77px/2);
-    bottom: 50px;
-    font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
-    font-size: 16px;
-    opacity: 1;
-    transition: opacity 0.6s;
+	height: 77px;
+	position: absolute;
+	border-radius: 77px;
+	background: rgba(0,0,0,0.4);
+	color: white;
+	text-align: center;
+	line-height: 4;
+	left: calc((100% - 77px)/2);
+	/* bottom: 50px; */
+	top: 78vh;
+	font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
+	font-size: 16px;
+	opacity: 1;
+	transition: opacity 0.6s;
 }
-div.con_main_wrap div.btn_wrap a.area_scroll._mode_off{
+/* div.con_main_wrap div.btn_wrap a.area_scroll{
 	width: 77px;
     height: 77px;
     position: absolute;
@@ -140,15 +113,15 @@ div.con_main_wrap div.btn_wrap a.area_scroll._mode_off{
     font-size: 16px;
 	opacity: 0;
 	transition: opacity 0.6s;
-}
-div.con_main_wrap div.btn_wrap a.area_scroll._mode_on img{
+} */
+._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 a.area_scroll img{
 	position: absolute;
 	left: 18px;
 	bottom: 4px;
 	width: 40px;
 	height: 40px;
 }
-div.con_main_wrap div.btn_wrap a.area_scroll._mode_off img{
+/* div.con_main_wrap div.btn_wrap a.area_scroll img{
 	position: absolute;
 	width: 40px;
 	height: 40px;
@@ -156,7 +129,7 @@ div.con_main_wrap div.btn_wrap a.area_scroll._mode_off img{
 	bottom: 4px;
 	opacity: 0;
 	transition: opacity 1s;
-}
+} */
 div.con_main_wrap div.btn_wrap a.btn_buy{
 	position: absolute;
     width: 114px;
@@ -177,11 +150,11 @@ div.con_main_wrap div.btn_wrap a.btn_buy{
 	font-size: 7vw;
 	line-height: 13.5vw;
 	letter-spacing: -3px;
+	top: 10vh;
+	position: absolute;
+	width: 100%;
 }
-/* ._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 h2.con_main{
-	font-size: 0;
-	line-height: 25vw;
-} */
+
 ._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 p.con_sub2{
 	opacity: 0;
 }
@@ -202,6 +175,9 @@ div.artcl_item h2.con_main{
 	width: 287px;
 	height: 44px;
 	margin: 0 auto;
+	top: 18vh;
+	position: absolute;
+	left: calc((100% - 287px)/2);
 }
 
 div.artcl_item p.con_btm{
@@ -224,10 +200,10 @@ div.artcl_item p.con_btm{
 }
 
 div.navi_wrap{}
-div.navi_wrap a.area_click._mode_on{
+._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 a.area_click{
 	position: absolute;
     right: 10px;
-    top: calc((100vh - 108px)/2);
+    top: calc((100vh - 106px)/2);
     width: 78px;
     height: 45px;
     background: rgba(141,141,141,0.8);
@@ -242,25 +218,8 @@ div.navi_wrap a.area_click._mode_on{
     opacity: 1;
     transition: opacity 0.6s;
 }
-div.navi_wrap a.area_click._mode_off{
-	position: absolute;
-    right: 10px;
-    top: calc((100vh - 108px)/2);
-    width: 78px;
-    height: 45px;
-    background: rgba(141,141,141,0.8);
-    border-radius: 150px;
-    text-align: left;
-    padding-left: 14px;
-    line-height: 45px;
-    color: white;
-    font-weight: 400;
-    font-size: 14px;
-    font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
-	opacity: 0;
-	transition: opacity 0.6s;
-}
-div.navi_wrap a.area_click span.click_circle{
+
+._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 a.area_click span.click_circle{
 	display:inline-block;
 	width:22px;
 	height:22px;
@@ -282,10 +241,10 @@ div.navi_wrap ul{
 div.navi_wrap ul li.navi_no{
 	width: 24px;
 	height: 24px;
+	position:relative;
 	border-radius: 20px;
 	font-color: rgb(255,255,255);
 	background-color: rgb(255,186,177);
-	position:relative;
 	margin-top: 12px;
 	transition: all 1s;
 	transition-timing-function: ease-in-out;
@@ -317,17 +276,7 @@ div.navi_wrap ul li.navi_no a:hover {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    
 }
-
-/* div.navi_wrap ul li.navi_no a::after {
-	content:"";
-	display:inline-block;
-	width:15px;
-	height:calc(100% - 0px);
-	background-color: rgb(90,90,90);
-	border-radius: 20px;
-} */
 
 div.main_nm_wrap{
 	position: absolute;

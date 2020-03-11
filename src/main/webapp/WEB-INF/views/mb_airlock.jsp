@@ -395,10 +395,10 @@
 					._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 {
 						opacity: 1;
 						visibility: visible;
-						top: 14vh;
+						top: 0;
     					z-index: 0;
     					left: 0;
-    					position: relative;
+    					position: absolute;
     					width: 100%;
 					}
 					._device_mobile .view_template_contents.vr_pos_1 div#artclItem1 {
@@ -442,16 +442,16 @@
 									<h1><a href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" title="link to content">airlock</a></h1>
 								</div>
 								<div class="btn_wrap">
-									<a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a>
+									<!-- <a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a> -->
 									<a class="btn_video" title="link to content">video</a>
 									<a class="btn_buy" href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" target="_blank" title="link to content">구매하기</a>
 								</div>
-								<div id="airlockVideo" class="video_wrap _video_hide_">
+								<!-- <div id="airlockVideo" class="video_wrap _video_hide_">
 									<video class="video_source" src="https://contents.vrism.net/images/Airlock_Final_14.mp4" controls></video>
 									<a class="video_off">x</a>
-								</div>
+								</div> -->
 								<div class="navi_wrap">
-									<a class="area_click">click</a>
+									<!-- <a class="area_click">click</a> -->
 									<ul class="navi_list">
 										<li class="navi_no"><a href="javascript:changePage(0);void(0);" title="link to content">1</a></li>
 										<li class="navi_no"><a href="javascript:changePage(1);void(0);" title="link to content">2</a></li>
@@ -466,6 +466,8 @@
 								<div class="artcl_item" id="artclItem0">
 									<p class="con_sub1">더 높이, 더 멀리.</p>
 									<h2 class="con_main">air lock</h2>
+									<a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a>
+									<a class="area_click">click</a>
 								</div>
 								<div class="artcl_item" id="artclItem1">
 									<h4 class="con_headline _tmp_edit">매일 편안한<br/>러닝을 서포트</h4>
@@ -504,10 +506,10 @@
 						mb:{
 							position:[
 								[3.1, 0, 7, -0.128, 0.041, 0.3],
-								[2.2,0.1, 6.5, 0,-0,0.4],
-								[1,1.9, 8, 0,0,2],
-								[-1, -0.1, 6, -0.7,-0.2,0.8],
-								[2.3,-0.3, 5.7, 0.5, 0.5, -0.3]
+								[2.2,0.1, 6.5, 0,0,0.4],
+								[1,2, 8, 0,0,2],
+								[5.302434539794922, -0.030048912167549133, 5.5, 0, 0.6, 1.3],//-1, -0.1, 6, -0.7,-0.2,0.8
+								[2.3,-0.3, 6, 0, 0, 0]
 								/* [0.21180064976215363, 0.021999239921569824, 7.943977862881471, -0.2, 0.3, 0.9], //0
 								[2.8070664405822754, -0.3189876973628998, 5.559190342321084, 0,-0, 1.1], // 1
 								[0.8552609086036682, 1.8905259370803833, 9.999999946170468, 0.4, -0.5, 4.8], // 2
