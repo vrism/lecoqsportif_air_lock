@@ -1,5 +1,5 @@
 ﻿(function(ssq){
-	var	struc={}, config={}, listener={}, win, bdy, device, vrd;
+	var struc={}, config={}, listener={}, win, bdy, device, vrd;
 	ssq(document).ready(function(){ struc.init() });
 	struc = {
 		init : function() {
@@ -16,6 +16,7 @@
 			videoOff();
 			videoOn();
 			checkManual();
+			checkIe();
 		}
 	};
 	listener = {
@@ -26,10 +27,11 @@
 
 		}
 	};
-	function setSticky() {
+	
+	/*function setSticky() {
 		var elements = document.querySelectorAll('._sticky');
 		Stickyfill.add(elements);
-	}
+	}*/
 	function checkDevice() {
 		var _isMobile=(navigator.userAgent.match(/(iPhone|iPad|iPod|Android|Windows Phone|IEMobile|BlackBerry|Mobile Safari|Opera Mobi)/)?true:false);
 		if(_isMobile) {vr.device = "mobile"; device ="mb";}
@@ -52,7 +54,7 @@
 		bdy.addClass("_scroll_lock");
 		if (!vr) return;
 		checkDevice();
-		if (device=="dt") setSticky();
+		/*if (device=="dt") setSticky();*/
 		vrd = vr[device];
 		vr.container = ssq("#vrWrap");
 		vr.container.addClass("_device_"+vr.device);
@@ -92,7 +94,7 @@
 	}
 	function checkManual() {
 		var scroll = jQuery(".area_scroll"), click = jQuery(".area_click");
-		new Promise(function(resolve, reject){
+		/*new Promise(function(resolve, reject){
 			  setTimeout(function() {
 			    resolve(scroll.addClass("_mode_on"));
 			    click.addClass("_mode_on");
@@ -105,8 +107,11 @@
 				    click.removeClass("_mode_on");
 					click.addClass("_mode_off");
 			  }, 2000);
-			});
+			});*/
 			
+	}
+	function checkIe(){
+		if(navigator.userAgent.match(/Trident\/7\./)) { $('body').on("mousewheel", function () { event.preventDefault(); var wheelDelta = event.wheelDelta; var currentScrollPosition = window.pageYOffset; window.scrollTo(0, currentScrollPosition - wheelDelta); }); $('body').keydown(function (e) { e.preventDefault(); var currentScrollPosition = window.pageYOffset; switch (e.which) { case 38: window.scrollTo(0, currentScrollPosition - 120); break; case 40: window.scrollTo(0, currentScrollPosition + 120); break; default: return; } }); }
 	}
 	
 })(jQuery);
