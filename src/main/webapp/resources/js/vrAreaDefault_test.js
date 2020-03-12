@@ -64,10 +64,8 @@
 			url: vrURL+"config.json",
 			success: function(data){
 				var cfg = {};
-				console.log(data);
 				vr.jsonPath = vrURL+data.jsonPath.split("./assets/").join("");
-				console.log(vr.jsonPath);
-				ssq.getScript("./resources/js/template/"+vr.type+".js", function(){
+				ssq.getScript("./resources/js/template/"+vr.type+"_test.js", function(){
 					buildViewer(vr.vrismOption);
 				});
 			}

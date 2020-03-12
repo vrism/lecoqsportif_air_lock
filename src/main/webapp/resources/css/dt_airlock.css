@@ -3,6 +3,9 @@
 html{}
 body{
 	margin: 0;
+	overscroll-behavior: auto none;
+	-webkit-overflow-scrolling: touch;
+	overflow-x:hidden;
 }
 ::-webkit-scrollbar { display: none !important; }
 h1{
@@ -40,7 +43,8 @@ a:hover{
 	background-image:url('../images/bg_original.jpg');
 	background-repeat:repeat-x;
 	/* background-attachment: fixed; */
-	background-size: auto 220vh;
+	background-size: 100% 220vh;
+	-webkit-background-size: auto 220vh;
 	opacity: 0;
 	transition: all 0.6s;
 }
@@ -381,4 +385,7 @@ div.end_content img{ width: 60%;}
 		top: 22vh !important;
 		left: 11.5% !important;
 	}
+}
+button, a, input {
+	pointer-events: all !important;
 }
