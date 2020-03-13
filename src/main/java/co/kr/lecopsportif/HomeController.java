@@ -26,7 +26,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/airlock", method = RequestMethod.GET)
 	public String home(HttpServletRequest request, Model model) {
 		
 		Device device = DeviceUtils.getCurrentDevice(request);
@@ -38,7 +38,7 @@ public class HomeController {
 			//System.out.println("tablet user");
 			return "mb_airlock";
 		}else {
-			return "dt_airlock";
+			return "dt_airlock_test";
 		}
 	}
 	

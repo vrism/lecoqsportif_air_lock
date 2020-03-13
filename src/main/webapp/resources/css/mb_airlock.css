@@ -9,7 +9,8 @@ h1{
 ::-webkit-scrollbar { display: none !important; }
 a:link,
 a:visited,
-a:hover{
+a:hover,
+a:focus{
 	text-decoration: none;
 	-webkit-appearance: none;
 }
@@ -176,7 +177,7 @@ div.artcl_item p.con_btm{
 	text-align: justify;
 	line-height: 18px;
 }
-._device_mobile .view_template_contents div.con_main div.con_main_wrap::after{
+/* ._device_mobile .view_template_contents div.con_main div.con_main_wrap::after{
 	content: "";
 	display: block;
 	position: absolute;
@@ -186,7 +187,7 @@ div.artcl_item p.con_btm{
 	bottom: 0;
 	background-image: url("../images/fog.png");
 	pointer-events: none;
-}
+} */
 
 div.navi_wrap{}
 ._device_mobile .view_template_contents.vr_pos_0 div#artclItem0 a.area_click{

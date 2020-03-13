@@ -445,7 +445,7 @@
 								</div>
 								<div class="btn_wrap">
 									<!-- <a class="area_scroll">scroll<img src="./resources/images/scroll.svg"></a> -->
-									<a class="btn_video" title="link to content">video</a>
+									<!-- <a class="btn_video" title="link to content">video</a> -->
 									<a class="btn_buy" href="https://www.lecoqsportif.co.kr/index.do?netFunnelYn=N&loginUsrId=" target="_blank" title="link to content">구매하기</a>
 								</div>
 								<!-- <div id="airlockVideo" class="video_wrap _video_hide_">
