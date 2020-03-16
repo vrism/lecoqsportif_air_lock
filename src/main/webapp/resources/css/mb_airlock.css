@@ -7,12 +7,18 @@ h1{
 	margin: 0;
 }
 ::-webkit-scrollbar { display: none !important; }
+
+
+
 a:link,
 a:visited,
 a:hover,
-a:focus{
+a:active{
+	outline: none;
 	text-decoration: none;
 	-webkit-appearance: none;
+	-webkit-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 body div.bg_area{ 
 	display:block;
