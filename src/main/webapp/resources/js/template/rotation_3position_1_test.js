@@ -1,5 +1,5 @@
 ﻿(function(ssq){
-	var win = ssq(window), bdy = ssq(ssq("body")[0]), device = (vr.device == "desktop")? "dt":"mb", vrd = vr[device], _view = 0, _target = {curr:0, timer:null};
+	var win = ssq(window), bdy = ssq(ssq("body")[0]), device = (vr.device == "desktop")? "dt":"mb", vrd = vr[device], _view = 0, _target = {curr:0, timer:null}, _enableReturnScroll = 0;
 	window.pageCurr=0; window.changePage;
 	vr.vrismOption = {
 		autoRun:"on",
@@ -53,7 +53,6 @@
 			win[0].addEventListener('touchstart', function(e){
 				if (ssq(e.target).hasClass("vr_handle")) moveMode = false;
 				else moveMode = true;
-				console.log(e, moveMode);
 				//console.log("s");
 				if (_target.timer) {
 					clearInterval(_target.timer);
@@ -67,7 +66,6 @@
 				touchY = e.touches[0].screenY;
 				_view += moveY;
 				_view = Math.min(Math.max(0, _view), vrd.position.length*vrd.scrollStep-winH);
-				//console.log("m", moveY);
 				setChange();
 				parentFrameScrollControl(e, moveY);
 			}, {passive: false});
@@ -93,8 +91,12 @@
 			}, {passive: false});
 			function parentFrameScrollControl(e, delta){
 				if (delta<0){
-					window.parent.postMessage({ childData : 'scrollTop' }, '*');
+					if (_enableReturnScroll >3) window.parent.postMessage({ childData : 'scrollTop' }, '*');
+					_enableReturnScroll += 1;
+				} else {
+					_enableReturnScroll = 0;
 				}
+				if (_view < 50) window.parent.postMessage({ childData : 'scrollTop' }, '*');
 				if (_view < areaE - win.height() ) {
 					e.preventDefault();
 					e.stopPropagation();
@@ -102,6 +104,8 @@
 					return false;
 				}
 			}
+
+
 
 		}
 		ssq("html,body").on("scroll", function(e){
@@ -131,30 +135,22 @@
 			if (win.scrollTop() != 0) return;
 			var delta = (e.detail) ? e.detail * 40 : -e.wheelDelta;
 			//delta = Math.max(Math.min(100,delta),-100);
-			
 			_target.curr = _view+delta;
 			_target.curr = Math.min(Math.max(0, _target.curr), vrd.position.length*vrd.scrollStep-winH);
-			
 			if (_target.timer) {
 				clearInterval(_target.timer);
 				_target.timer=null;
 			}
 			_target.timer = setInterval(change, 1000/30); change();
-			console.log("3-2 _target.timer",_target.timer);
 			function change(){
-				
 				if (Math.round((_target.curr-_view)) == 0) {
 					clearInterval(_target.timer);
 					_target.timer=null;
 					_view = _target.curr;
 					setChange();
 				} else {
-					console.log("3-3_target.curr",_target.curr);
-					console.log("3-3__view",_view);
 					_view += (_target.curr - _view)*0.4;
-					console.log("3-3__view",_view);
 					_view = Math.round(_view*10)/10;
-					console.log("3-4",_view);
 					setChange();
 				}
 			}
@@ -175,6 +171,7 @@
 			}
 		}
 		function setChange(e) {
+			//console.log(win.scrollTop());
 			if (_view < 50) {
 				bdy.addClass("_scroll_vr_top").addClass("_scroll_vr").removeClass("_scroll_vr_bottom").removeClass("_scroll_after");
 			} else if (_view < areaE - win.height() ) {
@@ -186,10 +183,7 @@
 				return;
 			}
 			curr = (_view) / step;
-			console.log("2-2",curr);
-			console.log("2-2",ea-1);
 			curr = Math.max(0, Math.min(ea-1, curr));
-			console.log("2-3",curr);
 			if (vr.device == "desktop") pos = vr.viewer.curvePosition(curr, 0.6, 0.8);
 			else pos = vr.viewer.curvePosition(curr,0.8);	//0.4
 			setExtra();
@@ -200,7 +194,6 @@
 				vr.viewer.setUserControl("disabled");
 			}
 			pageCurr = Math.round(curr);
-			console.log("2-4",pageCurr);
 			for (var i=0; i<vrd.position.length; i++) {
 				if (i==pageCurr) {
 					ssq(".navi_list li:nth("+i+")").addClass("_curr");
@@ -260,14 +253,11 @@
 			vr.container.removeClass("_drag_mode");
 		}
 		changePage = function(no){
-			console.log("changePage");
 			no = Math.round(no);
-			console.log(no);
 			if(no === pageCurr) return;
 			var gab = Math.abs(no - pageCurr);
-			var time = 0, timeTotal = Math.ceil(gab*30*1.3), start=pageCurr*vrd.scrollStep, end=(no*vrd.scrollStep)-start;
+			var time = 0, timeTotal = Math.ceil(gab*30*1.3), start=pageCurr*vrd.scrollStep, end=no*vrd.scrollStep, move = end-start;
 			pageCurr = no;
-			console.log("pageCurr",pageCurr);
 			//ssq("html,body").stop().animate({"scrollTop":pageCurr*vrd.scrollStep}, gab*1300, "linear");
 			if (_target.timer) {
 				clearInterval(_target.timer);
@@ -281,7 +271,7 @@
 					_target.timer=null;
 					_view = end;
 				} else {
-					_view = start + (end*(time/timeTotal));
+					_view = start + (move*(time/timeTotal));
 				}
 				setChange();
 			}

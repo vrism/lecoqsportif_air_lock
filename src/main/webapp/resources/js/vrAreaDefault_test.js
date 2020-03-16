@@ -15,7 +15,6 @@
 			setVr();
 			videoOff();
 			videoOn();
-			checkManual();
 			checkIe();
 		}
 	};
@@ -91,10 +90,6 @@
 			jQuery('#airlockVideo').removeClass("_video_hide_");
 			jQuery('.video_source')[0].play();
 		});
-	}
-	function checkManual() {
-		var scroll = jQuery(".area_scroll"), click = jQuery(".area_click");
-		
 	}
 	function checkIe(){
 		if(navigator.userAgent.match(/Trident\/7\./)) { $('body').on("mousewheel", function () { event.preventDefault(); var wheelDelta = event.wheelDelta; var currentScrollPosition = window.pageYOffset; window.scrollTo(0, currentScrollPosition - wheelDelta); }); $('body').keydown(function (e) { e.preventDefault(); var currentScrollPosition = window.pageYOffset; switch (e.which) { case 38: window.scrollTo(0, currentScrollPosition - 120); break; case 40: window.scrollTo(0, currentScrollPosition + 120); break; default: return; } }); }
