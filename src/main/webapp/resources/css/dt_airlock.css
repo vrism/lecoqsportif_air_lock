@@ -23,12 +23,12 @@ a:hover{
 	top:0;
 	right:0;
 	bottom:0;
-	position:fixed;
+	position:absolute;
 	background-color:rgb(225,225,225);
 	background-image:url('../images/bg_original.jpg');
 	background-repeat:repeat-x;
-	background-attachment: fixed;
-	background-size: auto 220vh;
+	background-size: 100% 220vh;
+	/* -webkit-background-size: auto 220vh; */
 	opacity: 1;
 	visibility: visible;
 }
@@ -38,13 +38,12 @@ a:hover{
 	top:0;
 	right:0;
 	bottom:0;
-	position:fixed;
+	position:absolute;
 	background-color:rgb(225,225,225);
 	background-image:url('../images/bg_original.jpg');
 	background-repeat:repeat-x;
-	/* background-attachment: fixed; */
 	background-size: 100% 220vh;
-	-webkit-background-size: auto 220vh;
+	/* -webkit-background-size: auto 220vh; */
 	opacity: 0;
 	transition: all 0.6s;
 }
@@ -141,12 +140,12 @@ div.con_main_wrap div.btn_wrap a.btn_buy{
 
 div.artcl_item p.con_sub1{
 	font-family: 'Noto Sans KR', 'Malgun Gothic','맑은 고딕','Nanum Barun Gothic', sans-serif;
-	font-size: 2.5vw;
+	font-size: 2vw;
 	font-weight: 700;
 	text-transform: uppercase;
 	line-height: 3.5vw;
 	margin: 0 auto;
-	top: 12vh;
+	top: 10vh;
 	position: absolute;
 	text-align: center;
 	width: 100%;
@@ -156,9 +155,9 @@ div.artcl_item h2.main_nm{
 	background: url("../images/airlock.svg") no-repeat;
 	margin: 0;
 	text-transform: uppercase;
-	width: 680px;
+	width: 660px;
 	height: 101px;
-	left: calc((100% - 680px)/2);
+	left: calc((100% - 660px)/2);
 	margin: 0 auto;
 	top: 19vh;
 	position: absolute;
