@@ -481,7 +481,7 @@
 								</div>
 								<div class="artcl_item" id="artclItem3">
 									<h4 class="con_headline _tmp_edit">혁신적인 쿠셔닝 시스템</h4>
-									<p class="con_btm">달리는 동작을 분서해 최적의 위치에 설계된<br/>에어쿠션이 발에 전해지는 충격을 효과적으로<br/>흡수하고 다음 스텝의 에너지로 전환시킵니다.
+									<p class="con_btm">달리는 동작을 분석해 최적의 위치에 설계된<br/>에어쿠션이 발에 전해지는 충격을 효과적으로<br/>흡수하고 다음 스텝의 에너지로 전환시킵니다.
 									</p>
 								</div>
 							</div>
